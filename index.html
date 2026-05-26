@@ -1,0 +1,715 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Aung Phyo Paing — Software Developer</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  
+  </head>
+
+  <body>
+    <!-- ===== NAVBAR ===== -->
+    <nav>
+      <div class="nav-logo">APP<span>.</span></div>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#botany-section">Time Table </a></li>
+        <li><a href="#projects">Botany</a></li>
+
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <button
+          class="theme-toggle"
+          id="themeToggle"
+          title="Toggle theme"
+          aria-label="Toggle light/dark mode"
+        >
+          🌙
+        </button>
+        <a href="mailto:thompsonlankee@gmail.com" class="nav-cta">Talk</a>
+      </div>
+      <div class="hamburger" onclick="toggleMenu()">
+        <span></span><span></span><span></span>
+      </div>
+    </nav>
+
+    <!-- ===== RESOURCE MODAL ===== -->
+    <div class="resource-modal-overlay" id="resourceModal">
+      <div class="resource-modal-content">
+        <div class="resource-modal-header">
+          <h2 id="modalResourceName">Resource Name</h2>
+          <button class="resource-modal-close" onclick="closeResourceModal()">✕</button>
+        </div>
+        <div class="resource-attachments" id="attachmentsContainer">
+          <!-- Attachments will be injected here -->
+        </div>
+      </div>
+    </div>
+
+    <!-- FILE VIEWER -->
+<div class="file-viewer" id="fileViewer">
+
+  <div class="file-viewer-content">
+
+    <div class="viewer-header">
+      <h3 id="viewerTitle">Preview</h3>
+
+      <button onclick="closeViewer()">✕</button>
+    </div>
+
+    <div class="viewer-body" id="viewerBody">
+    </div>
+
+  </div>
+
+</div>
+
+    <!-- ===== HERO ===== -->
+    <section id="home">
+      <div class="section-inner">
+        <!-- WIDGETS START -->
+        <div class="widgets-container fade-in">
+          <div class="top-row">
+            <div class="widget-card clock-date-card">
+              <div id="day-name">Loading...</div>
+              <div id="digital-clock">00:00:00</div>
+              <div id="today-date">Loading...</div>
+            </div>
+            <div
+              class="widget-card"
+              style="
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+              "
+            >
+              <div
+                style="
+                  font-size: 0.7rem;
+                  color: var(--accent);
+                  font-weight: 800;
+                  letter-spacing: 2px;
+                  text-transform: uppercase;
+                "
+              >
+                Location Status
+              </div>
+              <div
+                style="font-size: 1.8rem; font-weight: 800; margin: 0.4rem 0"
+                id="loc-display"
+              >
+                Yangon, Myanmar
+              </div>
+              <div style="font-size: 0.75rem; color: var(--text-muted)">
+                Open-Meteo Real-time Data
+              </div>
+            </div>
+          </div>
+
+          <div class="weather-layout">
+            <!-- Main Current Day Dashboard -->
+            <div class="weather-main-card">
+              <div class="weather-top">
+                <div class="weather-info">
+                  <h2 id="weather-loc-name">Yangon</h2>
+                  <p id="weather-update-time">Current Conditions</p>
+                </div>
+                <div style="text-align: right">
+                  <div class="condition-text" id="weather-condition">
+                    Loading...
+                  </div>
+                  <p style="font-size: 0.8rem; color: var(--text-muted)">
+                    <span id="temp-high">--</span>° /
+                    <span id="temp-low">--</span>°
+                  </p>
+                </div>
+              </div>
+
+              <div class="current-display">
+                <div class="main-icon" id="main-weather-icon">⛅</div>
+                <div class="temp-big"><span id="current-temp">--</span>°</div>
+              </div>
+
+              <div class="weather-metrics-grid" id="weather-metrics">
+                <!-- Metrics Injected -->
+              </div>
+            </div>
+
+            <!-- Next 2 Days Forecast -->
+            <div class="forecast-side">
+              <div
+                style="
+                  font-size: 0.7rem;
+                  color: var(--accent);
+                  font-weight: 800;
+                  letter-spacing: 2px;
+                  text-transform: uppercase;
+                  margin-bottom: 0.5rem;
+                  padding-left: 0.5rem;
+                "
+              >
+                Next 2 Days
+              </div>
+              <div
+                id="forecast-2-days"
+                style="display: flex; flex-direction: column; gap: 1rem"
+              >
+                <!-- 2 Days Injected -->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- WIDGETS END -->
+      </div>
+    </section>
+
+    <section id="botany-section">
+      <div class="section-inner">
+        <div class="home-header fade-in">
+          <p class="section-label">// UDE Second Year</p>
+          <h1 class="home-title">
+            Second <span class="accent-text">Year Time Table</span>
+          </h1>
+        </div>
+
+        <div class="timetable-container fade-in">
+          <table id="botany-timetable">
+            <thead>
+              <tr id="month-row">
+                <th class="rotated-header">Month</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr id="date-row" class="date-row">
+                <td class="rotated-header">date</td>
+              </tr>
+              <tr id="experiment-row" class="experiment-row">
+                <td
+                  class="rotated-header"
+                  style="font-size: 0.6rem; line-height: 1.2"
+                >
+                  2<sup>nd</sup> yr Experiment No<br />(Week after one week)
+                </td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <br />
+        <br />
+
+        <div class="saturday-wrapper fade-in">
+          <div class="table-title">
+            <h2>UNIVERSITY OF EAST YANGON</h2>
+            <p>DISTANCE EDUCATION SECTION</p>
+            <h3>TIME TABLE FOR SECOND YEAR (ACADEMIC YEAR) 2026</h3>
+            <span>SATURDAY</span>
+          </div>
+
+          <div class="table-responsive">
+            <table class="saturday-table">
+              <thead>
+                <tr>
+                  <th>DAY</th>
+                  <th colspan="2">Specialization</th>
+                  <th>Room</th>
+
+                  <th>8:00<br />To<br />8:45</th>
+                  <th>8:50<br />To<br />9:35</th>
+                  <th>9:40<br />To<br />10:25</th>
+                  <th>10:30<br />To<br />11:15</th>
+                  <th></th>
+                  <th>12:00<br />To<br />12:45</th>
+                  <th>12:50<br />To<br />1:35</th>
+                  <th>1:40<br />To<br />2:25</th>
+                  <th>2:30<br />To<br />3:15</th>
+                  <th>3:20<br />To<br />4:00</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <!-- CHEMISTRY -->
+                <tr>
+                  <td rowspan="5" class="day-column">SATURDAY</td>
+
+                  <td colspan="2" class="major-name">CHEMISTRY</td>
+                  <td>M-002</td>
+
+                  <td>Eng<br />3/109</td>
+                  <td>Chem-2103/2108</td>
+                  <td colspan="2">Chem-2103/2108 (Pract:)<br />3-110</td>
+                  <td></td>
+                  <td colspan="2">Chem-2101/2106 (Pract:)<br />3-110</td>
+                  <td>Phys-2003/2004<br />(Lect)</td>
+                  <td>Phys (Pract:)<br />3-002</td>
+                  <td></td>
+                </tr>
+
+                <!-- PHYSICS -->
+                <tr>
+                  <td colspan="2" class="major-name">PHYSICS</td>
+                  <td>M-019</td>
+
+                  <td colspan="2">P-II (Pract:)<br />3-101/102</td>
+                  <td>P-I (Lect:)<br />M-019</td>
+                  <td>P-IV (Lect:)<br />M-019</td>
+                  <td></td>
+                  <td colspan="2">Math Tutorial<br />M-019</td>
+                  <td>Math (Lect:)<br />M-019</td>
+                  <td>P-III (Lect:)<br />M-019</td>
+                  <td></td>
+                </tr>
+
+                <!-- MATHEMATICS -->
+                <tr>
+                  <td colspan="2" class="major-name">MATHEMATICS</td>
+                  <td>3-202</td>
+
+                  <td colspan="3">Math-2103<br />3-202</td>
+                  <td>Math-2105<br />3-202</td>
+                  <td></td>
+                  <td>Math-2105<br />3-202</td>
+                  <td colspan="3">Math-2104<br />3-202</td>
+                  <td></td>
+                </tr>
+
+                <!-- ZOOLOGY -->
+                <tr>
+                  <td colspan="2" class="major-name">ZOOLOGY</td>
+                  <td>1-102</td>
+
+                  <td>Zool-2103/2113<br />(Lect)</td>
+                  <td colspan="2">Zool-2103/2113<br />(Pract:) Lab-1</td>
+                  <td>Zool-2104/2114<br />(Lect)</td>
+                  <td></td>
+                  <td colspan="2">
+                    1-002 <br />Zool-2104/2114<br />Lab-1 (Pract:)
+                  </td>
+                  <td>
+                    1-101 Lect <br />
+                    Bot- <br />
+                    2001/2002
+                  </td>
+                  <td colspan="2">
+                    1-008 <br />
+                    Lab-III (Pract)<br />Bot-2001/2002
+                  </td>
+                </tr>
+
+                <!-- BOTANY -->
+                <tr class="botany-highlight">
+                  <td colspan="2" class="major-name">BOTANY</td>
+                  <td>4-002</td>
+
+                  <td>Bot-2104, 2109<br />(Lect:)</td>
+                  <td colspan="2">Bot-2104, 2109<br />(Pract:)</td>
+                  <td>Bot-2101, 2106<br />(Lect:)</td>
+                  <td></td>
+                  <td colspan="2">Bot-2101<br />Bot-2106 <br />(Pract:)</td>
+                  <td>
+                    Zool-2001/2002<br />(Lect) <br />
+                    1-101
+                  </td>
+                  <td colspan="2">Zool-2001/2002<br />(Pract:) 1-008</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <br />
+        <br />
+        <div class="sunday-wrapper fade-in">
+          <div class="table-title">
+            <h2>UNIVERSITY OF EAST YANGON</h2>
+            <p>DISTANCE EDUCATION SECTION</p>
+            <h3>TIME TABLE FOR SECOND YEAR (ACADEMIC YEAR) 2026</h3>
+            <span>SUNDAY</span>
+          </div>
+
+          <div class="table-responsive">
+            <table class="sunday-table">
+              <thead>
+                <tr>
+                  <th>DAY</th>
+                  <th colspan="2">Specialization</th>
+                  <th>Room</th>
+
+                  <th>8:00<br />To<br />8:45</th>
+                  <th>8:50<br />To<br />9:35</th>
+                  <th>9:40<br />To<br />10:25</th>
+                  <th>10:30<br />To<br />11:15</th>
+                  <th></th>
+                  <th>12:00<br />To<br />12:45</th>
+                  <th>12:50<br />To<br />1:35</th>
+                  <th>1:40<br />To<br />2:25</th>
+                  <th>2:30<br />To<br />3:15</th>
+                  <th>3:20<br />To<br />4:00</th>
+                </tr>
+              </thead>
+
+              <tbody>
+                <!-- CHEMISTRY -->
+                <tr>
+                  <td rowspan="5" class="day-column">SUNDAY</td>
+
+                  <td colspan="2" class="major-name">CHEMISTRY</td>
+                  <td>M-002</td>
+
+                  <td>Eng<br />3/109</td>
+                  <td>Chem-2103/2108</td>
+                  <td colspan="2">Chem-2103/2108 (Pract:)<br />3-110</td>
+                  <td></td>
+                  <td colspan="2">Chem-2101/2106 (Pract:)<br />3-110</td>
+                  <td>Phys-2003/2004<br />(Lect)</td>
+                  <td>Phys (Pract:)<br />3-002</td>
+                  <td></td>
+                </tr>
+
+                <!-- PHYSICS -->
+                <tr>
+                  <td colspan="2" class="major-name">PHYSICS</td>
+                  <td>M-019</td>
+
+                  <td colspan="2">P-II (Pract:)<br />3-101/102</td>
+                  <td>P-I (Lect:)<br />M-019</td>
+                  <td>P-IV (Lect:)<br />M-019</td>
+                  <td></td>
+                  <td colspan="2">Math Tutorial<br />M-019</td>
+                  <td>Math (Lect:)<br />M-019</td>
+                  <td>P-III (Lect:)<br />M-019</td>
+                  <td></td>
+                </tr>
+
+                <!-- MATHEMATICS -->
+                <tr>
+                  <td colspan="2" class="major-name">MATHEMATICS</td>
+                  <td>3-202</td>
+
+                  <td colspan="3">Math-2103<br />3-202</td>
+                  <td>Math-2105<br />3-202</td>
+                  <td></td>
+                  <td>Math-2105<br />3-202</td>
+                  <td colspan="3">Math-2104<br />3-202</td>
+                  <td></td>
+                </tr>
+
+                <!-- ZOOLOGY -->
+                <tr>
+                  <td colspan="2" class="major-name">ZOOLOGY</td>
+                  <td>1-102</td>
+
+                  <td>Zool-2103/2113<br />(Lect)</td>
+                  <td colspan="2">Zool-2103/2113<br />(Pract:) Lab-1</td>
+                  <td>Zool-2104/2114<br />(Lect)</td>
+                  <td></td>
+                  <td colspan="2">
+                    1-002 <br />Zool-2104/2114<br />Lab-1 (Pract:)
+                  </td>
+                  <td>
+                    1-101 Lect <br />
+                    Bot- <br />
+                    2001/2002
+                  </td>
+                  <td colspan="2">
+                    1-008 <br />
+                    Lab-III (Pract)<br />Bot-2001/2002
+                  </td>
+                </tr>
+
+                <!-- BOTANY -->
+                <tr class="botany-highlight">
+                  <td colspan="2" class="major-name">BOTANY</td>
+                  <td>4-002</td>
+
+                  <td>Bot-2104, 2109<br />(Lect:)</td>
+                  <td colspan="2">Bot-2104, 2109<br />(Pract:)</td>
+                  <td>Bot-2101, 2106<br />(Lect:)</td>
+                  <td></td>
+                  <td colspan="2">Bot-2101<br />Bot-2106 <br />(Pract:)</td>
+                  <td>
+                    Zool-2001/2002<br />(Lect) <br />
+                    1-101
+                  </td>
+                  <td colspan="2">Zool-2001/2002<br />(Pract:) 1-008</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects">
+      <div class="section-inner">
+        <p class="section-label fade-in">// folders</p>
+
+        <h2 class="section-title fade-in">
+          My UDE <span class="accent">Informations</span>
+        </h2>
+
+        <p class="section-desc fade-in">
+          Organized notes, practical files, assignments and learning resources
+          for Botany majors.
+        </p>
+
+        <div class="projects-grid">
+          <!-- CARD 1 -->
+          <div class="project-card folder-card fade-in">
+            <div class="folder-top">
+              <div class="folder-icon">🌿</div>
+
+              <span class="folder-badge"> First Year </span>
+            </div>
+
+            <h3 class="folder-title">Botany 1st Year</h3>
+
+            <p class="folder-desc">
+              Lecture notes, assignments, practical records and study materials
+              for first year Botany students.
+            </p>
+
+            <div class="folder-tags">
+              <span>Notes</span>
+              <span>Practicals</span>
+              <span>Assignments</span>
+            </div>
+
+           <button class="folder-expand-btn">
+  📁 Open Folder
+</button>
+
+<div class="folder-expand-panel">
+
+  <div class="folder-panel-header">
+    <h3>First Year Resources</h3>
+
+    <button class="folder-close-btn">
+      ✕
+    </button>
+  </div>
+
+  <!-- Practical -->
+  <div class="resource-category">
+    <div class="resource-category-title">
+      🔬 Practical
+    </div>
+
+    <div class="resource-item" onclick="openResourceModal(event, 'Bot 1101-1106')">Bot 1101-1106</div>
+    <div class="resource-item" onclick="openResourceModal(event, 'Bot 1102-1107')">Bot 1102-1107</div>
+    <div class="resource-item" onclick="openResourceModal(event, 'Zool 1001-1002')">Zool 1001-1002</div>
+  </div>
+
+  <!-- Lecture -->
+  <div class="resource-category">
+    <div class="resource-category-title">
+      📚 Lecture
+    </div>
+
+    <div class="resource-item" onclick="openResourceModal(event, 'Bot 1101-1106')">Bot 1101-1106</div>
+    <div class="resource-item" onclick="openResourceModal(event, 'Bot 1102-1107')">Bot 1102-1107</div>
+    <div class="resource-item" onclick="openResourceModal(event, 'English')">English</div>
+  </div>
+
+  <!-- Assignment -->
+  <div class="resource-category">
+    <div class="resource-category-title">
+      ✏️ Assignment
+    </div>
+
+    <div class="resource-item" onclick="openResourceModal(event, 'Bot 1101-1106')">Bot 1101-1106</div>
+    <div class="resource-item" onclick="openResourceModal(event, 'English')">English</div>
+  </div>
+
+  <!-- Notes -->
+  <div class="resource-category">
+    <div class="resource-category-title">
+      📝 Easy Notes
+    </div>
+
+    <div class="resource-item" onclick="openResourceModal(event, 'Botany Basics')">Botany Basics</div>
+    <div class="resource-item" onclick="openResourceModal(event, 'Cell Biology Notes')">Cell Biology Notes</div>
+  </div>
+
+</div>
+          </div>
+
+          <!-- CARD 2 -->
+          <div class="project-card folder-card fade-in">
+            <div class="folder-top">
+              <div class="folder-icon">🧪</div>
+
+              <span class="folder-badge"> Second Year </span>
+            </div>
+
+            <h3 class="folder-title">Botany 2nd Year</h3>
+
+            <p class="folder-desc">
+              Second year lecture files, practical, assigment documents
+              and exam preparation resources.
+            </p>
+
+            <div class="folder-tags">
+              <span>Practicals</span>
+              <span>Lectures</span>
+              <span>Assigments</span>
+            </div>
+
+            <!-- Folder Icon Button -->
+            <!-- FOLDER BUTTON -->
+            <button class="folder-expand-btn">📁 Open Folder</button>
+
+            <!-- EXPANDABLE PANEL -->
+            <div class="folder-expand-panel">
+              <div class="folder-panel-header">
+                <h3>Second Year Resources</h3>
+
+                <button class="folder-close-btn">✕</button>
+              </div>
+
+              <!-- Practical -->
+              <div class="resource-category">
+                <div class="resource-category-title">🔬 Practical</div>
+
+                <div class="resource-item" onclick="openResourceModal(event, 'Bot 2101-2106')">Bot 2101-2106</div>
+                <div class="resource-item" onclick="openResourceModal(event, 'Bot 2102-2107')">Bot 2102-2107</div>
+                <div class="resource-item" onclick="openResourceModal(event, 'Bot 2103-2108')">Bot 2103-2108</div>
+                <div class="resource-item" onclick="openResourceModal(event, 'Bot 2104-2109')">Bot 2104-2109</div>
+                <div class="resource-item" onclick="openResourceModal(event, 'Zool 2001-2002')">Zool 2001-2002</div>
+              </div>
+
+              <!-- Lecture -->
+              <div class="resource-category">
+                <div class="resource-category-title">📚 Lecture</div>
+
+                <div class="resource-item" onclick="openResourceModal(event, 'Bot 2101-2106 Lecture')">Bot 2101-2106</div>
+                <div class="resource-item" onclick="openResourceModal(event, 'Bot 2102-2107 Lecture')">Bot 2102-2107</div>
+                <div class="resource-item" onclick="openResourceModal(event, 'Zool 2001-2002 Lecture')">Zool 2001-2002</div>
+              </div>
+
+              <!-- Assignment -->
+              <div class="resource-category">
+                <div class="resource-category-title">✏️ Assignment</div>
+
+                <div class="resource-item" onclick="openResourceModal(event, 'Bot 2101-2106 Assignment')">Bot 2101-2106</div>
+                <div class="resource-item" onclick="openResourceModal(event, 'Bot 2102-2107 Assignment')">Bot 2102-2107</div>
+              </div>
+
+              <!-- Notes -->
+              <div class="resource-category">
+                <div class="resource-category-title">📝 Study Notes</div>
+
+                <div class="resource-item" onclick="openResourceModal(event, 'Plant Physiology Notes')">Plant Physiology Notes</div>
+                <div class="resource-item" onclick="openResourceModal(event, 'Ecology Study Guide')">Ecology Study Guide</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== CONTACT ===== -->
+   <section id="contact">
+    <div class="section-inner">
+      <p class="section-label fade-in">// get in touch</p>
+      <h2 class="section-title fade-in">Let's <span class="accent">Connect</span></h2>
+      <div class="divider fade-in"></div>
+      <div class="contact-grid">
+        <div class="contact-info fade-in">
+          <h3>Get in Touch</h3>
+          <p>Looking for a dedicated software developer? I'm open to full-time roles, freelance projects, and
+            collaboration opportunities. Let's discuss how I can contribute to your team.</p>
+          <div class="contact-links">
+            <a href="mailto:thompsonlankee@gmail.com" class="contact-link">
+              <span class="contact-link-icon">&#x2709;&#xfe0f;</span>
+              <div>
+                <div class="contact-link-label">Email</div>
+                <div class="contact-link-value">thompsonlankee@gmail.com</div>
+              </div>
+            </a>
+            <a href="tel:+959754242109" class="contact-link">
+              <span class="contact-link-icon">&#x1f4de;</span>
+              <div>
+                <div class="contact-link-label">Phone</div>
+                <div class="contact-link-value">+95 9 754 242 109</div>
+              </div>
+            </a>
+            <a href="https://github.com/ThompsonLanKee" target="_blank" class="contact-link">
+              <span class="contact-link-icon">&#x1f4bb;</span>
+              <div>
+                <div class="contact-link-label">GitHub</div>
+                <div class="contact-link-value">github.com/ThompsonLanKee</div>
+              </div>
+            </a>
+            <div class="contact-link" style="cursor:default;">
+              <span class="contact-link-icon">&#x1f4cd;</span>
+              <div>
+                <div class="contact-link-label">Location</div>
+                <div class="contact-link-value">Botahtaung Township, Yangon, Myanmar</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="fade-in">
+          <form class="contact-form" onsubmit="handleSubmit(event)">
+            <div class="form-group">
+              <label class="form-label">Your Name</label>
+              <input type="text" class="form-input" placeholder="Kyaw Kyaw" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email Address</label>
+              <input type="email" class="form-input" placeholder="kyaw@example.com" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Subject</label>
+              <input type="text" class="form-input" placeholder="Job opportunity / Collaboration" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Message</label>
+              <textarea class="form-textarea" placeholder="Tell me about your project or opportunity..."
+                required></textarea>
+            </div>
+            <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">
+              Send Message &#x2192;
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer>
+      <p>
+        Designed &amp; built by <span>Aung Phyo Paing</span> (Thompson LanKee)
+        &mdash; East District Downtown (Botahtaung), Yangon, Myanmar &copy; 2025
+      </p>
+      <p style="margin-top: 0.4rem; font-size: 0.76rem">
+        <a href="mailto:thompsonlankee@gmail.com" style="color: var(--accent)"
+          >thompsonlankee@gmail.com</a
+        >
+        &nbsp;&bull;&nbsp;
+        <a
+          href="https://github.com/ThompsonLanKee"
+          target="_blank"
+          style="color: var(--accent)"
+          >GitHub</a
+        >
+      </p>
+    </footer>
+
+    <script src="script.js">
+    
+    </script>
+
+    
+  </body>
+</html>
