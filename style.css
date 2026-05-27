@@ -344,6 +344,10 @@ section{
     font-size:5rem;
 }
 
+.forecast-icon{
+    font-size:2.4rem
+}
+
 .temp-big{
     font-size:4.5rem;
     font-weight:900;
@@ -775,6 +779,31 @@ td{
     transition:0.3s ease;
 }
 
+.folder-expand-btncust{
+    width:100%;
+
+    padding:1rem;
+
+    border:none;
+    border-radius:16px;
+
+    background:
+      linear-gradient(
+        135deg,
+        red,
+        orange
+      );
+
+    color:white;
+
+    font-size:1rem;
+    font-weight:800;
+
+    cursor:not-allowed;
+
+    transition:0.3s ease;
+}
+
 .folder-btn:hover,
 .folder-expand-btn:hover{
     transform:translateY(-2px);
@@ -950,20 +979,30 @@ td{
 }
 
 .resource-attachments{
-    display:grid;
-    grid-template-columns:repeat(auto-fill, minmax(200px, 1fr));
-    gap:1.5rem;
+
+    width:100%;
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:2rem;
 }
 
 .attachment-card{
     background:rgba(255,255,255,0.03);
     border:1px solid var(--border);
+    height:auto;
+     display:flex;
+    flex-direction:column;
     border-radius:16px;
     padding:1.5rem;
     text-align:center;
     animation:flyInFromRight 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
     animation-fill-mode:both;
 }
+
+
 
 @keyframes flyInFromRight {
     from {
@@ -1018,6 +1057,76 @@ td{
     transform:translateY(-2px);
 }
 
+.resource-folder-group{
+
+    width:100%;
+
+    display:block;
+
+    margin-bottom:2.5rem;
+}
+
+.resource-subfolder-title{
+    font-size:1.2rem;
+    color:var(--accent-light);
+
+    margin-bottom:1rem;
+
+    display:flex;
+    align-items:center;
+    gap:0.6rem;
+}
+.resource-subfolder-files{
+
+    width:100%;
+
+    display:flex;
+
+    gap:1.5rem;
+
+    overflow-x:auto;
+    overflow-y:hidden;
+
+    padding-bottom:1rem;
+
+    scroll-behavior:smooth;
+
+    -webkit-overflow-scrolling:touch;
+}
+.resource-subfolder-files .attachment-card{
+
+    min-width:260px;
+    width:260px;
+
+    flex-shrink:0;
+}
+.resource-subfolder-files::-webkit-scrollbar{
+    height:8px;
+}
+
+.resource-subfolder-files::-webkit-scrollbar-thumb{
+    background:var(--accent);
+    border-radius:999px;
+}
+
+.resource-subfolder-files::-webkit-scrollbar-track{
+    background:rgba(255,255,255,0.05);
+    border-radius:999px;
+}
+
+.attachment-thumb{
+
+    width:100%;
+    height:160px;
+
+    object-fit:cover;
+
+    border-radius:14px;
+
+    margin-bottom:1rem;
+
+    border:1px solid var(--border);
+}
 /* =========================
    CONTACT
 ========================= */

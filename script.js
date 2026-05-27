@@ -377,16 +377,57 @@ const resourceData = {
         { name: 'Audio_Lessons.zip', size: '15.2 MB', icon: '📦' }
     ]
     ,
-      "Zool 2001-2002": [
-    {
-     name: '(Practical 1) Nereis External Features.pdf',
-        size: '404 KB',
-        icon: '📄',
-        type: 'pdf',
-        url: './resources/zoo/pdfs/practical-1-nereis-external-features.pdf'
-    }
-  ]
-,
+      'Zool 2001-2002': {
+
+    'Practical (1)': [
+
+        {
+            name:'Practical_(1)_Nereis_External_Features.pdf',
+            size:'404 KB',
+            icon:'📄',
+            type:'pdf',
+            url:'./resources/zoo/pdfs/practical-1-nereis-external-features.pdf'
+        },
+
+        {
+            name:'Zoo-P1-Content1.jpg',
+            size:'169 KB',
+            icon:'🖼️',
+            type:'jpg',
+            url:'./resources/zoo/images/Zoo-P1-Content1.jpg'
+        },
+
+        {
+            name:'Zoo-P1-Content2.jpg',
+            size:'176 KB',
+            icon:'🖼️',
+            type:'jpg',
+            url:'./resources/zoo/images/Zoo-P1-Content2.jpg'
+        }
+        ,
+        {
+            name:'Zoo-P1-Diagram.png',
+            size:'2073 KB',
+            icon:'🖼️',
+            type:'png',
+            url:'./resources/zoo/images/Zoo-P1-Diagram.png'
+        }
+
+    ],
+
+    'Practical (2)': [
+
+        {
+            name:'Scoliodon External Features.pdf',
+            size:'659 KB',
+            icon:'📄',
+            type:'pdf',
+            url:'./resources/zoo/pdfs/practical-2-scoliodon-external-features.pdf'
+        }
+
+    ]
+
+},
     
     'Botany Basics': [
         { name: 'Plant_Structure.pdf', size: '3.2 MB', icon: '📄' },
@@ -480,49 +521,90 @@ function openResourceModal(event, resourceName) {
     
     // Clear and populate attachments
     attachmentsContainer.innerHTML = '';
-    attachments.forEach(attachment => {
 
-    const card = document.createElement('div');
+Object.entries(attachments).forEach(([folderName, files]) => {
 
-    card.className = 'attachment-card';
+    const folder = document.createElement('div');
 
-    card.innerHTML = `
-        <div class="attachment-icon">
-            ${attachment.icon}
-        </div>
+    folder.className = 'resource-folder-group';
 
-        <div class="attachment-name">
-            ${attachment.name}
-        </div>
+    folder.innerHTML = `
+        <h3 class="resource-subfolder-title">
+            📁 ${folderName}
+        </h3>
 
-        <div class="attachment-size">
-            ${attachment.size}
-        </div>
-
-        <div class="attachment-actions">
-
-  <button
-    class="attachment-btn"
-    onclick="previewFile('${attachment.url}', '${attachment.type}')"
-  >
-    Preview
-  </button>
-
-  <a
-    href="${attachment.url}"
-    download
-    class="attachment-btn"
-  >
-    Download
-  </a>
-
-</div>
+        <div class="resource-subfolder-files"></div>
     `;
 
-    attachmentsContainer.appendChild(card);
+    const filesContainer =
+        folder.querySelector('.resource-subfolder-files');
+
+    files.forEach(attachment => {
+
+        const card = document.createElement('div');
+
+        card.className = 'attachment-card';
+
+        card.innerHTML = `
+            <div class="attachment-icon">
+                ${
+    ['jpg','jpeg','png','webp','gif']
+    .includes(attachment.type)
+
+    ?
+
+    `
+    <img
+        src="${attachment.url}"
+        class="attachment-thumb"
+    />
+    `
+
+    :
+
+    `
+    <div class="attachment-icon">
+        📄
+    </div>
+    `
+}
+            </div>
+
+            <div class="attachment-name">
+                ${attachment.name}
+            </div>
+
+            <div class="attachment-size">
+                ${attachment.size}
+            </div>
+
+            <div class="attachment-actions">
+
+                <button
+                    class="attachment-btn"
+                    onclick="previewFile('${attachment.url}','${attachment.type}')"
+                >
+                    Preview
+                </button>
+
+                <a
+                    href="${attachment.url}"
+                    download
+                    class="attachment-btn"
+                >
+                    Download
+                </a>
+
+            </div>
+        `;
+
+        filesContainer.appendChild(card);
+
+    });
+
+    attachmentsContainer.appendChild(folder);
 
 });
-    
     // Show modal
     modal.classList.add('active');
 }
@@ -546,36 +628,69 @@ document.getElementById('resourceModal').addEventListener('click', function(e) {
 
 function previewFile(url, type) {
 
-  const viewer = document.getElementById('fileViewer');
-  const body = document.getElementById('viewerBody');
+    const viewer =
+        document.getElementById('fileViewer');
 
-  body.innerHTML = '';
+    const body =
+        document.getElementById('viewerBody');
 
-  if(type === 'pdf'){
+    body.innerHTML = '';
 
-    body.innerHTML = `
-      <iframe
-        src="${url}"
-        width="100%"
-        height="600px"
-        style="border:none;border-radius:16px;"
-      ></iframe>
-    `;
+    /* normalize */
+    type = type.toLowerCase();
 
-  }else if(type === 'image'){
+    /* PDF */
+    if(type === 'pdf'){
 
-    body.innerHTML = `
-      <img
-        src="${url}"
-        style="
-          width:100%;
-          border-radius:16px;
-        "
-      />
-    `;
-  }
+        body.innerHTML = `
+            <iframe
+                src="${url}"
+                width="100%"
+                height="700px"
+                style="
+                    border:none;
+                    border-radius:16px;
+                    background:white;
+                "
+            ></iframe>
+        `;
 
-  viewer.classList.add('active');
+    }
+
+    /* IMAGE */
+    else if(
+        type === 'jpg'  ||
+        type === 'jpeg' ||
+        type === 'png'  ||
+        type === 'webp' ||
+        type === 'gif'
+    ){
+
+        body.innerHTML = `
+            <img
+                src="${url}"
+                style="
+                    width:100%;
+                    max-height:80vh;
+                    object-fit:contain;
+                    border-radius:16px;
+                "
+            />
+        `;
+
+    }
+
+    /* unsupported */
+    else{
+
+        body.innerHTML = `
+            <div class="preview-error">
+                Preview not supported.
+            </div>
+        `;
+    }
+
+    viewer.classList.add('active');
 }
 
 function closeViewer(){
