@@ -504,9 +504,9 @@ const resourceData = {
         pageCount: 2,
         fileSize: "534 KB",
         type: "PDF",
-        thumbnail:'./resources/botany/bot_2101-2106/practical/thumb.jpg',
+        thumbnail:'./resources/botany/bot_2101-2106/practical(1)/thumb.jpg',
         source: "Aung Phyo Paing",
-        url: "./resources/botany/bot_2101-2106/practical/bot-2101-2106-practical-1-Taxonomic-Description(or)Habit.pdf",
+        url: "./resources/botany/bot_2101-2106/practical(1)/bot-2101-2106-practical-1-Taxonomic-Description(or)Habit.pdf",
       },
 
       {
@@ -514,7 +514,7 @@ const resourceData = {
         fileSize: "92 KB",
         type: "JPG",
         source: "May Myat Noe",
-        url: "./resources/botany/bot_2101-2106/practical/Bot_2101-2106-P1-Content_Ref.-1.jpg",
+        url: "./resources/botany/bot_2101-2106/practical(1)/Bot_2101-2106-P1-Content_Ref.-1.jpg",
       },
 
       {
@@ -522,8 +522,37 @@ const resourceData = {
         fileSize: "1.9 MB",
         type: "PNG",
         source: "Phyo Thet Paing (Modified By Aung Phyo Paing)",
-        url: "./resources/botany/bot_2101-2106/practical/Bot_2101-2106-P1-Diagram_Ref.-1.png",
+        url: "./resources/botany/bot_2101-2106/practical(1)/Bot_2101-2106-P1-Diagram_Ref.-1.png",
       }
+     
+    ],
+
+    "Practical (2) Leaves": [
+      {
+        name: "Leaves.pdf",
+        pageCount: 2,
+        fileSize: "572 KB",
+        type: "PDF",
+        thumbnail:'./resources/botany/bot_2101-2106/practical(2)/thumb.jpg',
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2101-2106/practical(2)/bot-2101-2106-practical-2-leaves.pdf",
+      },
+
+      // {
+      //   name: "Bot_2101-2106-P1-Content_Ref.-1.jpg",
+      //   fileSize: "92 KB",
+      //   type: "JPG",
+      //   source: "May Myat Noe",
+      //   url: "./resources/botany/bot_2101-2106/practical/Bot_2101-2106-P1-Content_Ref.-1.jpg",
+      // },
+
+      // {
+      //   name: "Bot_2101-2106-P1-Diagram_Ref.-1.jpg",
+      //   fileSize: "1.9 MB",
+      //   type: "PNG",
+      //   source: "Phyo Thet Paing (Modified By Aung Phyo Paing)",
+      //   url: "./resources/botany/bot_2101-2106/practical/Bot_2101-2106-P1-Diagram_Ref.-1.png",
+      // }
      
     ],
 
