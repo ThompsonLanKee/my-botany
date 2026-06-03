@@ -1236,6 +1236,86 @@ td{
 
     border:1px solid var(--border);
 }
+
+
+/* =========================
+ABOUT SECTION
+========================= */
+
+#about{
+background:var(--bg-primary);
+}
+
+.about-card{
+background:var(--bg-card);
+border:1px solid var(--border);
+border-radius:28px;
+padding:2rem;
+box-shadow:var(--shadow);
+}
+
+.about-card h3{
+color:var(--accent-light);
+margin-bottom:1rem;
+}
+
+.about-card p{
+color:var(--text-secondary);
+line-height:1.8;
+}
+
+.about-warning{
+margin-top:2rem;
+padding:1.5rem;
+border-radius:18px;
+background:rgba(239,68,68,0.08);
+border:1px solid rgba(239,68,68,0.2);
+}
+
+.about-benefits{
+margin-top:2rem;
+}
+
+.about-benefits ul{
+margin-left:1.2rem;
+display:grid;
+gap:0.75rem;
+}
+
+.about-vision{
+margin-top:2rem;
+}
+
+.future-plan{
+margin-top:2rem;
+}
+
+.future-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+gap:1rem;
+margin-top:1rem;
+}
+
+.future-item{
+padding:1.5rem;
+border-radius:18px;
+background:rgba(34,197,94,0.08);
+border:1px solid var(--border);
+text-align:center;
+}
+
+.future-item h4{
+color:var(--accent-light);
+margin-bottom:0.5rem;
+}
+
+.future-message{
+margin-top:1.5rem;
+font-weight:600;
+text-align:center;
+}
+
 /* =========================
    CONTACT
 ========================= */
