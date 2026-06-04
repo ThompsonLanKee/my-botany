@@ -656,7 +656,7 @@ const resourceData = {
         fileSize: "178 KB",
         type: "JPG",
         source: "May Myat Noe",
-        url: "./resources/zoo/practical/p2-2002/Zoo-P2-Content_Ref.-2.jpg",
+        url: "./resources/zoo/practical/p3-2001/Zoo-P3-Content_Ref.-2.jpg",
       },
       {
         name: "Zoo-P3-Diagram_Ref.-1.jpg",
@@ -664,7 +664,7 @@ const resourceData = {
         icon: "🖼️",
         type: "JPG",
         source: "May Myat Noe",
-        url: "./resources/zoo/practical/p2-2002/Zoo-P2-Diagram_Ref.-1.jpg",
+        url: "./resources/zoo/practical/p3-2001/Zoo-P3-Diagram_Ref.-1.jpg",
       },
 
     ],
