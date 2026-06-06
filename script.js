@@ -497,6 +497,7 @@ const resourceData = {
     { name: "Writing_Examples.pdf", size: "2.8 MB", icon: "📄" },
     { name: "Audio_Lessons.zip", size: "15.2 MB", icon: "📦" },
   ],
+
   "Bot 2101-2106 (Pract.)": {
     "Practical (1) Taxonomic Description/Habit": [
       {
@@ -504,7 +505,7 @@ const resourceData = {
         pageCount: 2,
         fileSize: "534 KB",
         type: "PDF",
-        thumbnail:'./resources/botany/bot_2101-2106/practical(1)/thumb.jpg',
+        thumbnail: "./resources/botany/bot_2101-2106/practical(1)/thumb.jpg",
         source: "Aung Phyo Paing",
         url: "./resources/botany/bot_2101-2106/practical(1)/bot-2101-2106-practical-1-Taxonomic-Description(or)Habit.pdf",
       },
@@ -518,44 +519,177 @@ const resourceData = {
       },
 
       {
-        name: "Bot_2101-2106-P1-Diagram_Ref.-1.jpg",
+        name: "Bot_2101-2106-P1-Content_Ref.-2(not_complete).jpg",
+        fileSize: "359 KB",
+        type: "JPG",
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2101-2106/practical(1)/Bot_2101-2106-P1-Content_Ref.-2(not_complete).jpg",
+      },
+
+      {
+        name: "Bot_2101-2106-P1-Diagram_Ref.-1.png",
         fileSize: "1.9 MB",
         type: "PNG",
         source: "Phyo Thet Paing (Modified By Aung Phyo Paing)",
         url: "./resources/botany/bot_2101-2106/practical(1)/Bot_2101-2106-P1-Diagram_Ref.-1.png",
-      }
-     
+      },
     ],
 
     "Practical (2) Leaves": [
       {
         name: "Leaves.pdf",
         pageCount: 2,
-        fileSize: "572 KB",
+        fileSize: "537 KB",
         type: "PDF",
-        thumbnail:'./resources/botany/bot_2101-2106/practical(2)/thumb.jpg',
+        thumbnail: "./resources/botany/bot_2101-2106/practical(2)/thumb.jpg",
         source: "Aung Phyo Paing",
         url: "./resources/botany/bot_2101-2106/practical(2)/bot-2101-2106-practical-2-leaves.pdf",
       },
 
-      // {
-      //   name: "Bot_2101-2106-P1-Content_Ref.-1.jpg",
-      //   fileSize: "92 KB",
-      //   type: "JPG",
-      //   source: "May Myat Noe",
-      //   url: "./resources/botany/bot_2101-2106/practical/Bot_2101-2106-P1-Content_Ref.-1.jpg",
-      // },
+      {
+        name: "Bot_2101-2106-P2-Content_Ref.-1.jpg",
+        fileSize: "359 KB",
+        type: "JPG",
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2101-2106/practical(2)/Bot_2101-2106-P2-Content_Ref.-1.jpg",
+      },
 
-      // {
-      //   name: "Bot_2101-2106-P1-Diagram_Ref.-1.jpg",
-      //   fileSize: "1.9 MB",
-      //   type: "PNG",
-      //   source: "Phyo Thet Paing (Modified By Aung Phyo Paing)",
-      //   url: "./resources/botany/bot_2101-2106/practical/Bot_2101-2106-P1-Diagram_Ref.-1.png",
-      // }
-     
+      {
+        name: "Bot_2101-2106-P2-Diagram_Ref.-1.jpg",
+        fileSize: "440 KB",
+        type: "JPG",
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2101-2106/practical(2)/Bot_2101-2106-P2-Diagram_Ref.-1.jpg",
+      },
+      {
+        name: "Bot_2101-2106-P2-Diagram_Ref.-2.jpg",
+        fileSize: "415 KB",
+        type: "JPG",
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2101-2106/practical(2)/Bot_2101-2106-P2-Diagram_Ref.-2.jpg",
+      },
     ],
 
+    "Practical (3) Inflorescences": [
+      {
+        name: "Inflorescences.pdf",
+        pageCount: 2,
+        fileSize: "530 KB",
+        type: "PDF",
+        thumbnail: "./resources/botany/bot_2101-2106/practical(3)/thumb.jpg",
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2101-2106/practical(3)/bot-2101-2106-practical-3-inflorescences.pdf",
+      },
+
+      {
+        name: "Bot_2101-2106-P3-Content_Ref.-1.jpg",
+        fileSize: "318 KB",
+        type: "JPG",
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2101-2106/practical(3)/Bot_2101-2106-P3-Content_Ref.-1.jpg",
+      },
+
+      {
+        name: "Bot_2101-2106-P3-Diagram_Ref.-1.jpg",
+        fileSize: "493 KB",
+        type: "JPG",
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2101-2106/practical(3)/Bot_2101-2106-P3-Diagram_Ref.-1.jpg",
+      },
+      {
+        name: "Bot_2101-2106-P3-Diagram_Ref.-2.jpg",
+        fileSize: "563 KB",
+        type: "JPG",
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2101-2106/practical(3)/Bot_2101-2106-P3-Diagram_Ref.-2.jpg",
+      },
+    ],
+
+    "Practical (4) Flower & Calyx": [
+      {
+        name: "Flower_&_Calyx.pdf",
+        pageCount: 2,
+        fileSize: "759 KB",
+        type: "PDF",
+        thumbnail: "./resources/botany/bot_2101-2106/practical(4)/thumb.jpg",
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2101-2106/practical(4)/bot-2101-2106-practical-4-flower_&_calyx.pdf",
+      },
+
+      {
+        name: "Bot_2101-2106-P4-Content_Ref.-1.jpg",
+        fileSize: "318 KB",
+        type: "JPG",
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2101-2106/practical(4)/Bot_2101-2106-P4-Content_Ref.-1.jpg",
+      },
+
+      {
+        name: "Bot_2101-2106-P4-Diagram_Ref.-1.jpg",
+        fileSize: "307 KB",
+        type: "JPG",
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2101-2106/practical(4)/Bot_2101-2106-P4-Diagram_Ref.-1.jpg",
+      },
+      {
+        name: "Bot_2101-2106-P4-Diagram_Ref.-2.jpg",
+        fileSize: "288 KB",
+        type: "JPG",
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2101-2106/practical(4)/Bot_2101-2106-P4-Diagram_Ref.-2.jpg",
+      },
+    ],
+
+    "Practical (5) Corolla & Androecium": [
+      {
+        name: "Corolla_&_Androecium.pdf",
+        pageCount: 4,
+        fileSize: "759 KB",
+        type: "PDF",
+        thumbnail: "./resources/botany/bot_2101-2106/practical(5)/thumb.jpg",
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2101-2106/practical(5)/bot-2101-2106-practical-5-corolla_&_androecium.pdf",
+      },
+
+      {
+        name: "Bot_2101-2106-P5-Content_Ref.-1.jpg",
+        fileSize: "411 KB",
+        type: "JPG",
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2101-2106/practical(5)/Bot_2101-2106-P5-Content_Ref.-1.jpg",
+      },
+
+      {
+        name: "Bot_2101-2106-P5-Diagram_Ref.-1.jpg",
+        fileSize: "261 KB",
+        type: "JPG",
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2101-2106/practical(5)/Bot_2101-2106-P5-Diagram_Ref.-1.jpg",
+      },
+      {
+        name: "Bot_2101-2106-P5-Diagram_Ref.-2.jpg",
+        fileSize: "219 KB",
+        type: "JPG",
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2101-2106/practical(5)/Bot_2101-2106-P5-Diagram_Ref.-2.jpg",
+      },
+
+      {
+        name: "Bot_2101-2106-P5-Diagram_Ref.-3.jpg",
+        fileSize: "278 KB",
+        type: "JPG",
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2101-2106/practical(5)/Bot_2101-2106-P5-Diagram_Ref.-3.jpg",
+      },
+
+      {
+        name: "Bot_2101-2106-P5-Diagram_Ref.-4.jpg",
+        fileSize: "389 KB",
+        type: "JPG",
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2101-2106/practical(5)/Bot_2101-2106-P5-Diagram_Ref.-4.jpg",
+      },
+    ],
   },
 
   "Zool 2001-2002 (Pract.)": {
@@ -565,7 +699,7 @@ const resourceData = {
         pageCount: 2,
         fileSize: "413 KB",
         type: "PDF",
-        thumbnail:'./resources/zoo/practical/p1-2001/thumb.jpg',
+        thumbnail: "./resources/zoo/practical/p1-2001/thumb.jpg",
         source: "Aung Phyo Paing",
         url: "./resources/zoo/practical/p1-2001/zool-2001-2002-practical-1-nereis-external-features-(invert.).pdf",
       },
@@ -600,7 +734,7 @@ const resourceData = {
         name: "Scoliodon_External_Features(Vert.).pdf",
         pageCount: 3,
         fileSize: "659 KB",
-        thumbnail:'./resources/zoo/practical/p2-2002/thumb.jpg',
+        thumbnail: "./resources/zoo/practical/p2-2002/thumb.jpg",
         type: "PDF",
         source: "Aung Phyo Paing",
         url: "./resources/zoo/practical/p2-2002/zool-2001-2002-practical-2-scoliodon-external-features-(vert.).pdf",
@@ -629,7 +763,6 @@ const resourceData = {
         source: "May Myat Noe",
         url: "./resources/zoo/practical/p2-2002/Zoo-P2-Diagram_Ref.-1.jpg",
       },
-
     ],
 
     "Practical (3) Pheretima posthuma External Features (2001-Invertebrate)": [
@@ -637,7 +770,7 @@ const resourceData = {
         name: "Pheretima_posthuma_External_Features(Invert.).pdf",
         pageCount: 2,
         fileSize: "221 KB",
-        thumbnail:'./resources/zoo/practical/p3-2001/thumb.jpg',
+        thumbnail: "./resources/zoo/practical/p3-2001/thumb.jpg",
         type: "PDF",
         source: "Aung Phyo Paing",
         url: "./resources/zoo/practical/p3-2001/zool-2001-2002-practical-3-Pheretima-posthuma-external-features-(invert.).pdf",
@@ -666,7 +799,6 @@ const resourceData = {
         source: "May Myat Noe",
         url: "./resources/zoo/practical/p3-2001/Zoo-P3-Diagram_Ref.-1.jpg",
       },
-
     ],
 
     "Practical (4) Rana tigrina External Features (2002-Vertebrate)": [
@@ -674,7 +806,7 @@ const resourceData = {
         name: "Rana_tigrina_External_Features(Vert.).pdf",
         pageCount: 2,
         fileSize: "453 KB",
-        thumbnail:'./resources/zoo/practical/p4-2002/thumb.jpg',
+        thumbnail: "./resources/zoo/practical/p4-2002/thumb.jpg",
         type: "PDF",
         source: "Aung Phyo Paing",
         url: "./resources/zoo/practical/p4-2002/zool-2001-2002-practical-4-Pheretima-posthuma-external-features-(vert.).pdf",
@@ -703,21 +835,19 @@ const resourceData = {
         source: "May Myat Noe",
         url: "./resources/zoo/practical/p4-2002/Zoo-P4-Diagram_Ref.-1.jpg",
       },
-
     ],
 
-    
     "Practical (5) Palamnaeus External Features (2001-Invertebrate)": [
       {
         name: "Palamnaeus_External_Features(Invert.).pdf",
         pageCount: 2,
         fileSize: "230 KB",
-        thumbnail:'./resources/zoo/practical/p5-2001/thumb.jpg',
+        thumbnail: "./resources/zoo/practical/p5-2001/thumb.jpg",
         type: "PDF",
         source: "Aung Phyo Paing",
         url: "./resources/zoo/practical/p5-2001/zool-2001-2002-practical-5-Palamnaeus-external-features-(invert.).pdf",
       },
-       {
+      {
         name: "Zoo-P5-Content_Ref.-1.jpg",
         fileSize: "160 KB",
         type: "JPG",
@@ -742,12 +872,12 @@ const resourceData = {
       },
     ],
 
-     "Practical (6) Uromastix External Features (2002-Vertebrate)": [
+    "Practical (6) Uromastix External Features (2002-Vertebrate)": [
       {
         name: "Uromastix_External_Features(Vert.).pdf",
         pageCount: 3,
         fileSize: "385 KB",
-        thumbnail:'./resources/zoo/practical/p6-2002/thumb.jpg',
+        thumbnail: "./resources/zoo/practical/p6-2002/thumb.jpg",
         type: "PDF",
         source: "Aung Phyo Paing",
         url: "./resources/zoo/practical/p6-2002/zool-2001-2002-practical-6-Uromastix-external-features-(vert.).pdf",
@@ -776,7 +906,6 @@ const resourceData = {
         source: "May Myat Noe",
         url: "./resources/zoo/practical/p6-2002/Zoo-P6-Diagram_Ref.-1.jpg",
       },
-
     ],
   },
 
@@ -894,13 +1023,7 @@ function openResourceModal(event, resourceName) {
       card.innerHTML = `
 
     <img
-        src="${
-            attachment.thumbnail
-            ?
-            attachment.thumbnail
-            :
-            attachment.url
-        }"
+        src="${attachment.thumbnail ? attachment.thumbnail : attachment.url}"
         class="attachment-thumb"
     />
 
@@ -930,13 +1053,7 @@ function openResourceModal(event, resourceName) {
             <span class="info-separator">:</span>
 
             <span class="info-value">
-                ${
-                    attachment.pageCount
-                    ?
-                    attachment.pageCount
-                    :
-                    1
-                }
+                ${attachment.pageCount ? attachment.pageCount : 1}
             </span>
         </div>
 
@@ -1026,8 +1143,7 @@ function previewFile(url, type) {
   type = type.toLowerCase();
 
   /* PDF */
-  if(type === 'pdf'){
-
+  if (type === "pdf") {
     body.innerHTML = `
 
         <div class="mobile-pdf-actions">
@@ -1053,9 +1169,8 @@ function previewFile(url, type) {
             "
         ></iframe>
     `;
-} else if (
-
-  /* IMAGE */
+  } else if (
+    /* IMAGE */
     type === "jpg" ||
     type === "jpeg" ||
     type === "png" ||
@@ -1074,8 +1189,7 @@ function previewFile(url, type) {
             />
         `;
   } else {
-
-  /* unsupported */
+    /* unsupported */
     body.innerHTML = `
             <div class="preview-error">
                 Preview not supported.
@@ -1089,3 +1203,186 @@ function previewFile(url, type) {
 function closeViewer() {
   document.getElementById("fileViewer").classList.remove("active");
 }
+
+// const subjectCard =
+//     document.getElementById("subjectCard");
+
+// const practicalCard =
+//     document.getElementById("practicalCard");
+
+// subjectCard.addEventListener("click", () => {
+//     document
+//         .getElementById("subjectModal")
+//         .classList.add("active");
+// });
+
+// practicalCard.addEventListener("click", () => {
+
+//     let html = "";
+
+//     practicalSubjects.forEach(subject => {
+
+//         const data = resourceData[subject];
+
+//         if (!data) return;
+
+//         html += `
+//             <div style="margin-bottom:1rem">
+//                 <strong>${subject}</strong>
+//                 <br>
+//                 ${Object.keys(data).length} Practicals
+//             </div>
+//         `;
+//     });
+
+//     html += `
+//         <hr style="margin:1rem 0">
+//         <strong>Total :
+//         ${countPracticals()} Practicals</strong>
+//     `;
+
+//     document.getElementById(
+//         "practicalSummary"
+//     ).innerHTML = html;
+
+//     document
+//         .getElementById("practicalModal")
+//         .classList.add("active");
+// });
+
+// function closeStatsModal() {
+
+//     document
+//         .querySelectorAll(".stats-modal")
+//         .forEach(m => {
+//             m.classList.remove("active");
+//         });
+// }
+
+// function countResources(data) {
+//     let total = 0;
+
+//     function walk(obj) {
+
+//         if (Array.isArray(obj)) {
+//             total += obj.length;
+//             return;
+//         }
+
+//         if (typeof obj === "object" && obj !== null) {
+//             Object.values(obj).forEach(walk);
+//         }
+//     }
+
+//     walk(data);
+
+//     return total;
+// }
+
+// document.getElementById("resourceCount").textContent =
+//     countResources(resourceData);
+
+//     const practicalSubjects = [
+//     "Bot 2101-2106 (Pract.)",
+//     "Bot 2102-2107 (Pract.)",
+//     "Bot 2103-2108 (Pract.)",
+//     "Bot 2104-2109 (Pract.)",
+//     "Zool 2001-2002 (Pract.)"
+// ];
+
+// function countPracticals() {
+
+//     let total = 0;
+
+//     practicalSubjects.forEach(subject => {
+
+//         const subjectData = resourceData[subject];
+
+//         if (!subjectData) return;
+
+//         total += Object.keys(subjectData).length;
+//     });
+
+//     return total;
+// }
+
+// document.getElementById("practicalCount").textContent =
+//     countPracticals();
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const musicBtn = document.getElementById("musicBtn");
+    const bgMusic = document.getElementById("bgMusic");
+    const rainContainer = document.getElementById("rainContainer");
+
+    if(!musicBtn || !bgMusic || !rainContainer){
+        console.error("Rain system elements not found");
+        return;
+    }
+
+    let playing = false;
+
+    function startRain(){
+
+        rainContainer.innerHTML = "";
+
+        rainContainer.classList.add("active");
+
+        for(let i=0;i<150;i++){
+
+            const drop =
+                document.createElement("div");
+
+            drop.className = "raindrop";
+
+            drop.style.left =
+                Math.random() * 100 + "%";
+
+            drop.style.animationDuration =
+                (0.5 + Math.random()) + "s";
+
+            drop.style.animationDelay =
+                Math.random() * 2 + "s";
+
+            rainContainer.appendChild(drop);
+        }
+    }
+
+    function stopRain(){
+
+        rainContainer.classList.remove("active");
+        rainContainer.innerHTML = "";
+    }
+
+    musicBtn.addEventListener("click", async () => {
+
+        if(!playing){
+
+            try{
+
+                await bgMusic.play();
+
+                startRain();
+
+                musicBtn.textContent = "⏸️";
+
+                playing = true;
+
+            }catch(err){
+
+                console.error(err);
+            }
+
+        }else{
+
+            bgMusic.pause();
+
+            stopRain();
+
+            musicBtn.textContent = "🌧️";
+
+            playing = false;
+        }
+    });
+
+});

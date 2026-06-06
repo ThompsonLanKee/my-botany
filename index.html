@@ -11,7 +11,6 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-  
   </head>
 
   <body>
@@ -47,7 +46,9 @@
       <div class="resource-modal-content">
         <div class="resource-modal-header">
           <h2 id="modalResourceName">Resource Name</h2>
-          <button class="resource-modal-close" onclick="closeResourceModal()">✕</button>
+          <button class="resource-modal-close" onclick="closeResourceModal()">
+            ✕
+          </button>
         </div>
         <div class="resource-attachments" id="attachmentsContainer">
           <!-- Attachments will be injected here -->
@@ -56,26 +57,43 @@
     </div>
 
     <!-- FILE VIEWER -->
-<div class="file-viewer" id="fileViewer">
+    <div class="file-viewer" id="fileViewer">
+      <div class="file-viewer-content">
+        <div class="viewer-header">
+          <h3 id="viewerTitle">Preview</h3>
 
-  <div class="file-viewer-content">
+          <button onclick="closeViewer()">✕</button>
+        </div>
 
-    <div class="viewer-header">
-      <h3 id="viewerTitle">Preview</h3>
-
-      <button onclick="closeViewer()">✕</button>
+        <div class="viewer-body" id="viewerBody"></div>
+      </div>
     </div>
-
-    <div class="viewer-body" id="viewerBody">
-    </div>
-
-  </div>
-
-</div>
 
     <!-- ===== HERO ===== -->
     <section id="home">
       <div class="section-inner">
+        <div class="hero-intro fade-in">
+          <p class="section-label">// UDE Botany Repository</p>
+
+          <h1 class="home-main-title">
+            Botany <span class="accent-text">Academic Repository</span>
+          </h1>
+
+          <p class="home-main-desc">
+            A centralized educational repository designed for University of
+            Distance Education Botany students. This platform provides lecture
+            notes, practical files, assignments, diagrams, references and
+            academic resources throughout the Second Year journey and beyond.
+          </p>
+
+          <div class="hero-badges">
+            <span>🌱 Botany Major</span>
+            <span>🎓 UDE Distance Education</span>
+            <span>📚 Academic Year 2026</span>
+            <span>🔒 Academic Use Only</span>
+          </div>
+        </div>
+
         <!-- WIDGETS START -->
         <div class="widgets-container fade-in">
           <div class="top-row">
@@ -169,119 +187,159 @@
           </div>
         </div>
         <!-- WIDGETS END -->
+        <!-- Repository Statistics -->
+
+        <!-- <div class="repo-stats fade-in">
+          <div class="stat-card">
+            <div class="stat-icon">📂</div>
+            <div class="stat-number" id="resourceCount">0</div>
+            <div class="stat-label">Resources</div>
+          </div>
+
+          <div class="stat-card clickable-stat" id="subjectCard">
+            <div class="stat-icon">📖</div>
+            <div class="stat-number">6</div>
+            <div class="stat-label">Subjects</div>
+          </div>
+
+          <div class="stat-card clickable-stat" id="practicalCard">
+            <div class="stat-icon">🧪</div>
+            <div class="stat-number" id="practicalCount">0</div>
+            <div class="stat-label">Practicals</div>
+          </div>
+
+          <div class="stat-card">
+            <div class="stat-icon">🎓</div>
+            <div class="stat-number">2nd</div>
+            <div class="stat-label">Year</div>
+          </div>
+        </div>
+
+         Academic Progress 
+
+        <div class="academic-progress fade-in">
+          <h2>📈 Academic Progress</h2>
+
+          <div class="progress-grid">
+            <div class="progress-item">
+              <h3>Current Status</h3>
+              <p>Second Year</p>
+            </div>
+
+            <div class="progress-item">
+              <h3>Current Semester</h3>
+              <p>2026 Academic Year</p>
+            </div>
+
+            <div class="progress-item">
+              <h3>Repository Stage</h3>
+              <p>Active Development</p>
+            </div>
+
+            <div class="progress-item">
+              <h3>Future Goal</h3>
+              <p>3rd & Final Year</p>
+            </div>
+          </div>
+        </div> -->
       </div>
     </section>
 
+    <section id="about">
+      <div class="section-inner">
+        <p class="section-label fade-in">// Repository Information</p>
 
-<section id="about">
-  <div class="section-inner">
+        <h2 class="section-title fade-in">
+          About This <span class="accent">Repository</span>
+        </h2>
 
+        <div class="about-card fade-in">
+          <div class="about-intro">
+            <h3>🌱 Purpose</h3>
 
-<p class="section-label fade-in">// Repository Information</p>
+            <p>
+              This repository was created to collect, organize and preserve
+              educational resources for Botany Second Year students of the
+              University of Distance Education (UDE).
+            </p>
 
-<h2 class="section-title fade-in">
-  About This <span class="accent">Repository</span>
-</h2>
+            <p>
+              Lecture notes, practical files, assignments, diagrams, references
+              and study materials are stored in one place to make learning
+              easier and more efficient.
+            </p>
+          </div>
 
-<div class="about-card fade-in">
+          <div class="about-warning">
+            <h3>🔒 Important Notice</h3>
 
-  <div class="about-intro">
-    <h3>🌱 Purpose</h3>
+            <p>
+              The contents of this repository are intended only for students and
+              individuals directly related to the Botany program.
+            </p>
 
-    <p>
-      This repository was created to collect, organize and preserve
-      educational resources for Botany Second Year students of the
-      University of Distance Education (UDE).
-    </p>
+            <p>
+              Please do not distribute, re-upload or share these materials with
+              unrelated persons or public platforms without permission.
+            </p>
+          </div>
 
-    <p>
-      Lecture notes, practical files, assignments, diagrams,
-      references and study materials are stored in one place
-      to make learning easier and more efficient.
-    </p>
-  </div>
+          <div class="about-benefits">
+            <h3>📚 Benefits</h3>
 
-  <div class="about-warning">
-    <h3>🔒 Important Notice</h3>
+            <ul>
+              <li>Centralized academic resource storage</li>
+              <li>Easy access to lecture and practical materials</li>
+              <li>Reduced risk of losing important files</li>
+              <li>Better exam and assignment preparation</li>
+              <li>Organized subject-based resource management</li>
+              <li>Accessible anytime from any device</li>
+            </ul>
+          </div>
 
-    <p>
-      The contents of this repository are intended only for students
-      and individuals directly related to the Botany program.
-    </p>
+          <div class="about-vision">
+            <h3>🚀 Vision</h3>
 
-    <p>
-      Please do not distribute, re-upload or share these materials
-      with unrelated persons or public platforms without permission.
-    </p>
-  </div>
+            <p>
+              To build a long-term academic knowledge repository that supports
+              students throughout their university journey.
+            </p>
 
-  <div class="about-benefits">
+            <p>
+              This repository will continue growing as more educational
+              resources become available.
+            </p>
+          </div>
 
-    <h3>📚 Benefits</h3>
+          <div class="future-plan">
+            <h3>🎓 Future Development</h3>
 
-    <ul>
-      <li>Centralized academic resource storage</li>
-      <li>Easy access to lecture and practical materials</li>
-      <li>Reduced risk of losing important files</li>
-      <li>Better exam and assignment preparation</li>
-      <li>Organized subject-based resource management</li>
-      <li>Accessible anytime from any device</li>
-    </ul>
+            <div class="future-grid">
+              <div class="future-item">
+                <h4>Botany 2nd Year</h4>
+                <p>Current Repository</p>
+              </div>
 
-  </div>
+              <div class="future-item">
+                <h4>Botany 3rd Year</h4>
+                <p>Coming Soon</p>
+              </div>
 
-  <div class="about-vision">
+              <div class="future-item">
+                <h4>Botany Final Year</h4>
+                <p>Future Expansion</p>
+              </div>
+            </div>
 
-    <h3>🚀 Vision</h3>
-
-    <p>
-      To build a long-term academic knowledge repository that supports
-      students throughout their university journey.
-    </p>
-
-    <p>
-      This repository will continue growing as more educational
-      resources become available.
-    </p>
-
-  </div>
-
-  <div class="future-plan">
-
-    <h3>🎓 Future Development</h3>
-
-    <div class="future-grid">
-
-      <div class="future-item">
-        <h4>Botany 2nd Year</h4>
-        <p>Current Repository</p>
+            <p class="future-message">
+              This repository will be reused and expanded throughout Third Year
+              and Final Year to create a complete academic archive.
+            </p>
+          </div>
+        </div>
+        ```
       </div>
-
-      <div class="future-item">
-        <h4>Botany 3rd Year</h4>
-        <p>Coming Soon</p>
-      </div>
-
-      <div class="future-item">
-        <h4>Botany Final Year</h4>
-        <p>Future Expansion</p>
-      </div>
-
-    </div>
-
-    <p class="future-message">
-      This repository will be reused and expanded throughout
-      Third Year and Final Year to create a complete academic archive.
-    </p>
-
-  </div>
-
-</div>
-```
-
-  </div>
-</section>
-
+    </section>
 
     <section id="botany-section">
       <div class="section-inner">
@@ -343,7 +401,6 @@
                   <th>12:50<br />To<br />1:35</th>
                   <th>1:40<br />To<br />2:25</th>
                   <th>2:30<br />To<br />3:15</th>
-              
                 </tr>
               </thead>
 
@@ -355,13 +412,16 @@
                   <td colspan="2" class="major-name">CHEMISTRY</td>
                   <td>M-002</td>
 
-                  <td>Chem-<br>2102/2107</td>
-                  <td>Chem-<br>2101/2106</td>
-                  <td colspan="2">Chem-2102/2107 (Pract:)<br>1-010</td>
+                  <td>Chem-<br />2102/2107</td>
+                  <td>Chem-<br />2101/2106</td>
+                  <td colspan="2">Chem-2102/2107 (Pract:)<br />1-010</td>
                   <td></td>
-                  <td colspan="2">3-110 <br> Chem-2104/2109 (Pract:)</td>
+                  <td colspan="2">
+                    3-110 <br />
+                    Chem-2104/2109 (Pract:)
+                  </td>
                   <td>Chem-2104/2109<br />(Lect)</td>
-                 
+
                   <td></td>
                 </tr>
 
@@ -370,14 +430,19 @@
                   <td colspan="2" class="major-name">PHYSICS</td>
                   <td>M-019</td>
 
-                  <td colspan="2">P-III Practical<br>3-101/102</td>
-                  <td>P-IV (Prac:)<br> 3-101/102</td>
-                  <td>Eng <br> M-221/222</td>
+                  <td colspan="2">P-III Practical<br />3-101/102</td>
+                  <td>
+                    P-IV (Prac:)<br />
+                    3-101/102
+                  </td>
+                  <td>
+                    Eng <br />
+                    M-221/222
+                  </td>
                   <td></td>
-                  <td>P-II<br>(Lect:) M-019</td>
-                  <td colspan="2">P-I (Pract:)<br>3-101/102</td>
+                  <td>P-II<br />(Lect:) M-019</td>
+                  <td colspan="2">P-I (Pract:)<br />3-101/102</td>
                   <td></td>
-               
                 </tr>
 
                 <!-- MATHEMATICS -->
@@ -385,32 +450,38 @@
                   <td colspan="2" class="major-name">MATHEMATICS</td>
                   <td>3-202</td>
 
-                  <td colspan="3">Math-2101<br> 3-202</td>
-                  <td>Eng<br>1-102</td>
+                  <td colspan="3">
+                    Math-2101<br />
+                    3-202
+                  </td>
+                  <td>Eng<br />1-102</td>
                   <td></td>
-                  <td colspan="3">Math-2102<br>3-202</td>
+                  <td colspan="3">Math-2102<br />3-202</td>
                   <td></td>
                 </tr>
 
                 <!-- ZOOLOGY -->
                 <tr>
                   <td colspan="2" class="major-name">ZOOLOGY</td>
-                  <td>1-002 <br> 1-102</td>
+                  <td>
+                    1-002 <br />
+                    1-102
+                  </td>
 
-                  <td colspan="2">Zool-2101/2111<br>(Pract:)</td>
-                  <td>Zool-2101/2111<br>(Lect:) Lab-1</td>
-                  <td>Eng<br>1-102</td>
+                  <td colspan="2">Zool-2101/2111<br />(Pract:)</td>
+                  <td>Zool-2101/2111<br />(Lect:) Lab-1</td>
+                  <td>Eng<br />1-102</td>
                   <td></td>
                   <td>
-                    Zool- <br> 2102/2112<br> Lect 
+                    Zool- <br />
+                    2102/2112<br />
+                    Lect
                   </td>
                   <td colspan="2">
-                    (Zool-2102,2112) <br>
+                    (Zool-2102,2112) <br />
                     (Pract:)
                   </td>
-                  <td>
-                   CTC
-                  </td>
+                  <td>CTC</td>
                 </tr>
 
                 <!-- BOTANY -->
@@ -418,14 +489,17 @@
                   <td colspan="2" class="major-name">BOTANY</td>
                   <td>4-002</td>
 
-                  <td>Bot-2102, 2107<br>(Lect:)</td>
-                  <td colspan="2">Bot-2102, 2107<br>(Pract:)</td>
-                  <td>Eng<br>1-102</td>
+                  <td>Bot-2102, 2107<br />(Lect:)</td>
+                  <td colspan="2">Bot-2102, 2107<br />(Pract:)</td>
+                  <td>Eng<br />1-102</td>
                   <td></td>
-                  <td>Bot-2103<br> Bot-2108 <br>(Lect:)</td>
+                  <td>
+                    Bot-2103<br />
+                    Bot-2108 <br />(Lect:)
+                  </td>
                   <td colspan="2">
-                    Bot-2103 <br> Bot-2108 <br>(Pract:) <br />
-                   
+                    Bot-2103 <br />
+                    Bot-2108 <br />(Pract:) <br />
                   </td>
                   <td></td>
                 </tr>
@@ -581,9 +655,9 @@
 
             <h3 class="folder-title">Botany 1st Year</h3>
 
-             <p class="folder-desc">
-              First year lecture files, practical, assigment documents
-              and exam preparation resources.
+            <p class="folder-desc">
+              First year lecture files, practical, assigment documents and exam
+              preparation resources.
             </p>
 
             <div class="folder-tags">
@@ -591,66 +665,101 @@
               <span>Lectures</span>
               <span>Assigments</span>
               <span>Easy Notes</span>
-            
             </div>
 
-           <button class="folder-expand-btncust" disabled>
-  🔒 Locked 
-</button>
+            <button class="folder-expand-btncust" disabled>🔒 Locked</button>
 
-<div class="folder-expand-panel">
+            <div class="folder-expand-panel">
+              <div class="folder-panel-header">
+                <h3>First Year Resources</h3>
 
-  <div class="folder-panel-header">
-    <h3>First Year Resources</h3>
+                <button class="folder-close-btn">✕</button>
+              </div>
 
-    <button class="folder-close-btn">
-      ✕
-    </button>
-  </div>
+              <!-- Practical -->
+              <div class="resource-category">
+                <div class="resource-category-title">🔬 Practical</div>
 
-  <!-- Practical -->
-  <div class="resource-category">
-    <div class="resource-category-title">
-      🔬 Practical
-    </div>
+                <div
+                  class="resource-item"
+                  onclick="openResourceModal(event, 'Bot 1101-1106')"
+                >
+                  Bot 1101-1106
+                </div>
+                <div
+                  class="resource-item"
+                  onclick="openResourceModal(event, 'Bot 1102-1107')"
+                >
+                  Bot 1102-1107
+                </div>
+                <div
+                  class="resource-item"
+                  onclick="openResourceModal(event, 'Zool 1001-1002')"
+                >
+                  Zool 1001-1002
+                </div>
+              </div>
 
-    <div class="resource-item" onclick="openResourceModal(event, 'Bot 1101-1106')">Bot 1101-1106</div>
-    <div class="resource-item" onclick="openResourceModal(event, 'Bot 1102-1107')">Bot 1102-1107</div>
-    <div class="resource-item" onclick="openResourceModal(event, 'Zool 1001-1002')">Zool 1001-1002</div>
-  </div>
+              <!-- Lecture -->
+              <div class="resource-category">
+                <div class="resource-category-title">📚 Lecture</div>
 
-  <!-- Lecture -->
-  <div class="resource-category">
-    <div class="resource-category-title">
-      📚 Lecture
-    </div>
+                <div
+                  class="resource-item"
+                  onclick="openResourceModal(event, 'Bot 1101-1106')"
+                >
+                  Bot 1101-1106
+                </div>
+                <div
+                  class="resource-item"
+                  onclick="openResourceModal(event, 'Bot 1102-1107')"
+                >
+                  Bot 1102-1107
+                </div>
+                <div
+                  class="resource-item"
+                  onclick="openResourceModal(event, 'English')"
+                >
+                  English
+                </div>
+              </div>
 
-    <div class="resource-item" onclick="openResourceModal(event, 'Bot 1101-1106')">Bot 1101-1106</div>
-    <div class="resource-item" onclick="openResourceModal(event, 'Bot 1102-1107')">Bot 1102-1107</div>
-    <div class="resource-item" onclick="openResourceModal(event, 'English')">English</div>
-  </div>
+              <!-- Assignment -->
+              <div class="resource-category">
+                <div class="resource-category-title">✏️ Assignment</div>
 
-  <!-- Assignment -->
-  <div class="resource-category">
-    <div class="resource-category-title">
-      ✏️ Assignment
-    </div>
+                <div
+                  class="resource-item"
+                  onclick="openResourceModal(event, 'Bot 1101-1106')"
+                >
+                  Bot 1101-1106
+                </div>
+                <div
+                  class="resource-item"
+                  onclick="openResourceModal(event, 'English')"
+                >
+                  English
+                </div>
+              </div>
 
-    <div class="resource-item" onclick="openResourceModal(event, 'Bot 1101-1106')">Bot 1101-1106</div>
-    <div class="resource-item" onclick="openResourceModal(event, 'English')">English</div>
-  </div>
+              <!-- Notes -->
+              <div class="resource-category">
+                <div class="resource-category-title">📝 Easy Notes</div>
 
-  <!-- Notes -->
-  <div class="resource-category">
-    <div class="resource-category-title">
-      📝 Easy Notes
-    </div>
-
-    <div class="resource-item" onclick="openResourceModal(event, 'Botany Basics')">Botany Basics</div>
-    <div class="resource-item" onclick="openResourceModal(event, 'Cell Biology Notes')">Cell Biology Notes</div>
-  </div>
-
-</div>
+                <div
+                  class="resource-item"
+                  onclick="openResourceModal(event, 'Botany Basics')"
+                >
+                  Botany Basics
+                </div>
+                <div
+                  class="resource-item"
+                  onclick="openResourceModal(event, 'Cell Biology Notes')"
+                >
+                  Cell Biology Notes
+                </div>
+              </div>
+            </div>
           </div>
 
           <!-- CARD 2 -->
@@ -664,8 +773,8 @@
             <h3 class="folder-title">Botany 2nd Year</h3>
 
             <p class="folder-desc">
-              Second year lecture files, practical, assigment documents
-              and exam preparation resources.
+              Second year lecture files, practical, assigment documents and exam
+              preparation resources.
             </p>
 
             <div class="folder-tags">
@@ -691,36 +800,96 @@
               <div class="resource-category">
                 <div class="resource-category-title">🔬 Practical</div>
 
-                <div class="resource-item" onclick="openResourceModal(event, 'Bot 2101-2106 (Pract.)')">Bot 2101-2106 (Pract.)</div>
-                <div class="resource-item" onclick="openResourceModal(event, 'Bot 2102-2107')">Bot 2102-2107</div>
-                <div class="resource-item" onclick="openResourceModal(event, 'Bot 2103-2108')">Bot 2103-2108</div>
-                <div class="resource-item" onclick="openResourceModal(event, 'Bot 2104-2109')">Bot 2104-2109</div>
-                <div class="resource-item" onclick="openResourceModal(event, 'Zool 2001-2002 (Pract.)')">Zool 2001-2002 (Pract.)</div>
+                <div
+                  class="resource-item"
+                  onclick="openResourceModal(event, 'Bot 2101-2106 (Pract.)')"
+                >
+                  Bot 2101-2106 (Pract.)
+                </div>
+                <div
+                  class="resource-item"
+                  onclick="openResourceModal(event, 'Bot 2102-2107')"
+                >
+                  Bot 2102-2107
+                </div>
+                <div
+                  class="resource-item"
+                  onclick="openResourceModal(event, 'Bot 2103-2108')"
+                >
+                  Bot 2103-2108
+                </div>
+                <div
+                  class="resource-item"
+                  onclick="openResourceModal(event, 'Bot 2104-2109')"
+                >
+                  Bot 2104-2109
+                </div>
+                <div
+                  class="resource-item"
+                  onclick="openResourceModal(event, 'Zool 2001-2002 (Pract.)')"
+                >
+                  Zool 2001-2002 (Pract.)
+                </div>
               </div>
 
               <!-- Lecture -->
               <div class="resource-category">
                 <div class="resource-category-title">📚 Lecture</div>
 
-                <div class="resource-item" onclick="openResourceModal(event, 'Bot 2101-2106 Lecture')">Bot 2101-2106</div>
-                <div class="resource-item" onclick="openResourceModal(event, 'Bot 2102-2107 Lecture')">Bot 2102-2107</div>
-                <div class="resource-item" onclick="openResourceModal(event, 'Zool 2001-2002 Lecture')">Zool 2001-2002</div>
+                <div
+                  class="resource-item"
+                  onclick="openResourceModal(event, 'Bot 2101-2106 Lecture')"
+                >
+                  Bot 2101-2106
+                </div>
+                <div
+                  class="resource-item"
+                  onclick="openResourceModal(event, 'Bot 2102-2107 Lecture')"
+                >
+                  Bot 2102-2107
+                </div>
+                <div
+                  class="resource-item"
+                  onclick="openResourceModal(event, 'Zool 2001-2002 Lecture')"
+                >
+                  Zool 2001-2002
+                </div>
               </div>
 
               <!-- Assignment -->
               <div class="resource-category">
                 <div class="resource-category-title">✏️ Assignment</div>
 
-                <div class="resource-item" onclick="openResourceModal(event, 'Bot 2101-2106 Assignment')">Bot 2101-2106</div>
-                <div class="resource-item" onclick="openResourceModal(event, 'Bot 2102-2107 Assignment')">Bot 2102-2107</div>
+                <div
+                  class="resource-item"
+                  onclick="openResourceModal(event, 'Bot 2101-2106 Assignment')"
+                >
+                  Bot 2101-2106
+                </div>
+                <div
+                  class="resource-item"
+                  onclick="openResourceModal(event, 'Bot 2102-2107 Assignment')"
+                >
+                  Bot 2102-2107
+                </div>
               </div>
 
               <!-- Notes -->
               <div class="resource-category">
                 <div class="resource-category-title">📝 Study Notes</div>
 
-                <div class="resource-item" onclick="openResourceModal(event, 'Plant Physiology Notes')">Plant Notes</div>
-                <div class="resource-item" onclick="openResourceModal(event, 'Ecology Study Guide')">Ecology Study Guide</div>
+                <div
+                  class="resource-item"
+                  onclick="openResourceModal(event, 'Plant Physiology Notes')"
+                >
+                  Plant Notes
+                </div>
+                <div
+                  class="resource-item"
+                  onclick="openResourceModal(event, 'Ecology Study Guide')"
+                >
+                  Ecology Study Guide
+                </div>
               </div>
             </div>
           </div>
@@ -729,74 +898,109 @@
     </section>
 
     <!-- ===== CONTACT ===== -->
-   <section id="contact">
-    <div class="section-inner">
-      <p class="section-label fade-in">// get in touch</p>
-      <h2 class="section-title fade-in">Let's <span class="accent">Connect</span></h2>
-      <div class="divider fade-in"></div>
-      <div class="contact-grid">
-        <div class="contact-info fade-in">
-          <h3>Get in Touch</h3>
-          <p>Looking for a dedicated software developer? I'm open to full-time roles, freelance projects, and
-            collaboration opportunities. Let's discuss how I can contribute to your team.</p>
-          <div class="contact-links">
-            <a href="mailto:thompsonlankee@gmail.com" class="contact-link">
-              <span class="contact-link-icon">&#x2709;&#xfe0f;</span>
-              <div>
-                <div class="contact-link-label">Email</div>
-                <div class="contact-link-value">thompsonlankee@gmail.com</div>
-              </div>
-            </a>
-            <a href="tel:+959754242109" class="contact-link">
-              <span class="contact-link-icon">&#x1f4de;</span>
-              <div>
-                <div class="contact-link-label">Phone</div>
-                <div class="contact-link-value">+95 9 754 242 109</div>
-              </div>
-            </a>
-            <a href="https://github.com/ThompsonLanKee" target="_blank" class="contact-link">
-              <span class="contact-link-icon">&#x1f4bb;</span>
-              <div>
-                <div class="contact-link-label">GitHub</div>
-                <div class="contact-link-value">github.com/ThompsonLanKee</div>
-              </div>
-            </a>
-            <div class="contact-link" style="cursor:default;">
-              <span class="contact-link-icon">&#x1f4cd;</span>
-              <div>
-                <div class="contact-link-label">Location</div>
-                <div class="contact-link-value">Botahtaung Township, Yangon, Myanmar</div>
+    <section id="contact">
+      <div class="section-inner">
+        <p class="section-label fade-in">// get in touch</p>
+        <h2 class="section-title fade-in">
+          Let's <span class="accent">Connect</span>
+        </h2>
+        <div class="divider fade-in"></div>
+        <div class="contact-grid">
+          <div class="contact-info fade-in">
+            <h3>Get in Touch</h3>
+            <p>
+              Looking for a dedicated software developer? I'm open to full-time
+              roles, freelance projects, and collaboration opportunities. Let's
+              discuss how I can contribute to your team.
+            </p>
+            <div class="contact-links">
+              <a href="mailto:thompsonlankee@gmail.com" class="contact-link">
+                <span class="contact-link-icon">&#x2709;&#xfe0f;</span>
+                <div>
+                  <div class="contact-link-label">Email</div>
+                  <div class="contact-link-value">thompsonlankee@gmail.com</div>
+                </div>
+              </a>
+              <a href="tel:+959754242109" class="contact-link">
+                <span class="contact-link-icon">&#x1f4de;</span>
+                <div>
+                  <div class="contact-link-label">Phone</div>
+                  <div class="contact-link-value">+95 9 754 242 109</div>
+                </div>
+              </a>
+              <a
+                href="https://github.com/ThompsonLanKee"
+                target="_blank"
+                class="contact-link"
+              >
+                <span class="contact-link-icon">&#x1f4bb;</span>
+                <div>
+                  <div class="contact-link-label">GitHub</div>
+                  <div class="contact-link-value">
+                    github.com/ThompsonLanKee
+                  </div>
+                </div>
+              </a>
+              <div class="contact-link" style="cursor: default">
+                <span class="contact-link-icon">&#x1f4cd;</span>
+                <div>
+                  <div class="contact-link-label">Location</div>
+                  <div class="contact-link-value">
+                    Botahtaung Township, Yangon, Myanmar
+                  </div>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-        <div class="fade-in">
-          <form class="contact-form" onsubmit="handleSubmit(event)">
-            <div class="form-group">
-              <label class="form-label">Your Name</label>
-              <input type="text" class="form-input" placeholder="Kyaw Kyaw" required />
-            </div>
-            <div class="form-group">
-              <label class="form-label">Email Address</label>
-              <input type="email" class="form-input" placeholder="kyaw@example.com" required />
-            </div>
-            <div class="form-group">
-              <label class="form-label">Subject</label>
-              <input type="text" class="form-input" placeholder="Job opportunity / Collaboration" required />
-            </div>
-            <div class="form-group">
-              <label class="form-label">Message</label>
-              <textarea class="form-textarea" placeholder="Tell me about your project or opportunity..."
-                required></textarea>
-            </div>
-            <button type="submit" class="btn-primary" style="width:100%;justify-content:center;">
-              Send Message &#x2192;
-            </button>
-          </form>
+          <div class="fade-in">
+            <form class="contact-form" onsubmit="handleSubmit(event)">
+              <div class="form-group">
+                <label class="form-label">Your Name</label>
+                <input
+                  type="text"
+                  class="form-input"
+                  placeholder="Kyaw Kyaw"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Email Address</label>
+                <input
+                  type="email"
+                  class="form-input"
+                  placeholder="kyaw@example.com"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Subject</label>
+                <input
+                  type="text"
+                  class="form-input"
+                  placeholder="Job opportunity / Collaboration"
+                  required
+                />
+              </div>
+              <div class="form-group">
+                <label class="form-label">Message</label>
+                <textarea
+                  class="form-textarea"
+                  placeholder="Tell me about your project or opportunity..."
+                  required
+                ></textarea>
+              </div>
+              <button
+                type="submit"
+                class="btn-primary"
+                style="width: 100%; justify-content: center"
+              >
+                Send Message &#x2192;
+              </button>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
+    </section>
 
     <!-- ===== FOOTER ===== -->
     <footer>
@@ -818,10 +1022,59 @@
       </p>
     </footer>
 
-    <script src="script.js">
-    
-    </script>
+    <script src="script.js"></script>
 
-    
+    <!-- <div class="stats-modal" id="subjectModal">
+
+  <div class="stats-modal-content">
+
+    <button class="stats-close"
+            onclick="closeStatsModal()">
+      ✕
+    </button>
+
+    <h2>📖 Second Year Subjects</h2>
+
+    <ul class="stats-list">
+      <li>Bot 2101-2106</li>
+      <li>Bot 2102-2107</li>
+      <li>Bot 2103-2108</li>
+      <li>Bot 2104-2109</li>
+      <li>English</li>
+      <li>Zool 2001-2002</li>
+    </ul>
+
+  </div>
+
+</div>
+
+<div class="stats-modal" id="practicalModal">
+
+  <div class="stats-modal-content">
+
+    <button class="stats-close"
+            onclick="closeStatsModal()">
+      ✕
+    </button>
+
+    <h2>🧪 Practical Summary</h2>
+
+    <div id="practicalSummary"></div>
+
+  </div>
+
+</div> -->
+<div id="rainContainer"></div>
+
+<audio id="bgMusic" loop>
+  <source src="./resources/audio/Workatapizzaplace🍕Rainmusic🌧🎵Roblox_1716496378971.mp3" type="audio/mpeg">
+</audio>
+
+<button id="musicBtn" class="music-btn">
+  🌧️
+</button>
+
+<script src="script.js"></script>
+</body>
   </body>
 </html>

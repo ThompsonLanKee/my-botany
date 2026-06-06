@@ -1639,3 +1639,251 @@ footer {
     filter: hue-rotate(360deg);
   }
 }
+
+
+
+
+/* ==================================
+HOME INTRO
+================================== */
+
+.hero-intro{
+text-align:center;
+margin-bottom:2rem;
+}
+
+.home-main-title{
+font-size:clamp(2.8rem,6vw,4.5rem);
+font-weight:900;
+margin-bottom:1rem;
+}
+
+.home-main-desc{
+max-width:850px;
+margin:auto;
+color:var(--text-secondary);
+line-height:1.9;
+margin-bottom:1.5rem;
+}
+
+.hero-badges{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:0.8rem;
+}
+
+.hero-badges span{
+padding:0.75rem 1rem;
+border-radius:999px;
+background:rgba(34,197,94,0.08);
+border:1px solid var(--border);
+color:var(--text-primary);
+}
+
+/* ==================================
+STATS
+================================== */
+
+.repo-stats{
+margin-top:2rem;
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+gap:1rem;
+}
+
+.stat-card{
+background:var(--bg-card);
+border:1px solid var(--border);
+border-radius:24px;
+padding:1.5rem;
+text-align:center;
+box-shadow:var(--shadow);
+}
+
+.stat-icon{
+font-size:2rem;
+}
+
+.stat-number{
+font-size:2rem;
+font-weight:900;
+color:var(--accent-light);
+}
+
+.stat-label{
+color:var(--text-secondary);
+}
+
+/* ==================================
+PROGRESS
+================================== */
+
+.academic-progress{
+margin-top:2rem;
+}
+
+.academic-progress h2{
+margin-bottom:1rem;
+color:var(--accent-light);
+}
+
+.progress-grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+gap:1rem;
+}
+
+.progress-item{
+background:var(--bg-card);
+border:1px solid var(--border);
+border-radius:24px;
+padding:1.5rem;
+box-shadow:var(--shadow);
+}
+
+.progress-item h3{
+color:var(--text-muted);
+font-size:0.9rem;
+margin-bottom:0.5rem;
+}
+
+.progress-item p{
+color:var(--accent-light);
+font-size:1.2rem;
+font-weight:800;
+}
+
+
+.clickable-stat{
+    cursor:pointer;
+    transition:.25s;
+}
+
+.clickable-stat:hover{
+    transform:translateY(-4px);
+    border-color:var(--accent);
+}
+
+.stats-modal{
+    position:fixed;
+    inset:0;
+    background:rgba(0,0,0,.7);
+    backdrop-filter:blur(6px);
+
+    display:none;
+
+    justify-content:center;
+    align-items:center;
+
+    z-index:3000;
+}
+
+.stats-modal.active{
+    display:flex;
+}
+
+.stats-modal-content{
+    width:90%;
+    max-width:600px;
+
+    background:var(--bg-card);
+
+    border:1px solid var(--border);
+
+    border-radius:24px;
+
+    padding:2rem;
+
+    position:relative;
+}
+
+.stats-close{
+    position:absolute;
+    top:15px;
+    right:15px;
+
+    border:none;
+
+    background:none;
+
+    font-size:1.2rem;
+
+    cursor:pointer;
+}
+
+.stats-list{
+    margin-top:1rem;
+}
+
+.stats-list li{
+    margin-bottom:.8rem;
+}
+
+
+.music-btn{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+
+    width:60px;
+    height:60px;
+
+    border:none;
+    border-radius:50%;
+
+    background:var(--accent);
+
+    color:white;
+
+    cursor:pointer;
+
+    font-size:1.5rem;
+
+    z-index:1500;
+
+    box-shadow:var(--shadow);
+}
+
+#rainContainer{
+    position:fixed;
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:500;
+
+    display:none;
+}
+
+#rainContainer.active{
+    display:block;
+}
+
+.raindrop{
+    position:absolute;
+
+    width:2px;
+    height:22px;
+
+    background:rgba(255,255,255,.35);
+
+    animation:rainFall linear infinite;
+}
+
+[data-theme="light"] .raindrop{
+    background:rgba(0,0,0,.18);
+}
+
+@keyframes rainFall{
+
+    from{
+        transform:translateY(-100px);
+    }
+
+    to{
+        transform:translateY(110vh);
+    }
+}
