@@ -690,6 +690,57 @@ const resourceData = {
         url: "./resources/botany/bot_2101-2106/practical(5)/Bot_2101-2106-P5-Diagram_Ref.-4.jpg",
       },
     ],
+
+    "Practical (6) Gynoecium, Fruit & Seed": [
+      {
+        name: "Corolla_&_Androecium.pdf",
+        pageCount: 4,
+        fileSize: "759 KB",
+        type: "PDF",
+        thumbnail: "./resources/botany/bot_2101-2106/practical(5)/thumb.jpg",
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2101-2106/practical(5)/bot-2101-2106-practical-5-corolla_&_androecium.pdf",
+      },
+
+      {
+        name: "Bot_2101-2106-P5-Content_Ref.-1.jpg",
+        fileSize: "411 KB",
+        type: "JPG",
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2101-2106/practical(5)/Bot_2101-2106-P5-Content_Ref.-1.jpg",
+      },
+
+      {
+        name: "Bot_2101-2106-P5-Diagram_Ref.-1.jpg",
+        fileSize: "261 KB",
+        type: "JPG",
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2101-2106/practical(5)/Bot_2101-2106-P5-Diagram_Ref.-1.jpg",
+      },
+      {
+        name: "Bot_2101-2106-P5-Diagram_Ref.-2.jpg",
+        fileSize: "219 KB",
+        type: "JPG",
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2101-2106/practical(5)/Bot_2101-2106-P5-Diagram_Ref.-2.jpg",
+      },
+
+      {
+        name: "Bot_2101-2106-P5-Diagram_Ref.-3.jpg",
+        fileSize: "278 KB",
+        type: "JPG",
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2101-2106/practical(5)/Bot_2101-2106-P5-Diagram_Ref.-3.jpg",
+      },
+
+      {
+        name: "Bot_2101-2106-P5-Diagram_Ref.-4.jpg",
+        fileSize: "389 KB",
+        type: "JPG",
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2101-2106/practical(5)/Bot_2101-2106-P5-Diagram_Ref.-4.jpg",
+      },
+    ],
   },
 
   "Zool 2001-2002 (Pract.)": {
@@ -906,6 +957,41 @@ const resourceData = {
         source: "May Myat Noe",
         url: "./resources/zoo/practical/p6-2002/Zoo-P6-Diagram_Ref.-1.jpg",
       },
+    ],
+  },
+
+  "Bot 2102-2107 (Asgmt.)": {
+    "Bot-2102 (Cell Biology) Assignment": [
+      {
+        name: "Bot-2102 (Cell Biology)",
+        pageCount: 2,
+        fileSize: "665 KB",
+        type: "PDF",
+        thumbnail: "./resources/botany/bot_2102-2107/assignment/2102.png",
+        source: "Purchased Note",
+        url: "./resources/botany/bot_2102-2107/assignment/Bot_2102_Assignment.pdf",
+      },
+
+    ],
+    "Bot-2107 (Plant Cytology and Anatomy) Assignment": [
+      {
+        name: "Bot-2107 (Plant Cytology and Anatomy)",
+        pageCount: 2,
+        fileSize: "708 KB",
+        type: "PDF",
+        thumbnail: "./resources/botany/bot_2102-2107/assignment/2107.png",
+        source: "Purchased Note",
+        url: "./resources/botany/bot_2102-2107/assignment/Bot_2107_Assignment.pdf",
+      },
+
+      // {
+      //   name: "Zoo-P1-Content_Ref.-1.jpg",
+      //   fileSize: "169 KB",
+      //   type: "JPG",
+      //   source: "May Myat Noe",
+      //   url: "./resources/zoo/practical/p1-2001/Zoo-P1-Content_Ref.-1.jpg",
+      // },
+
     ],
   },
 
