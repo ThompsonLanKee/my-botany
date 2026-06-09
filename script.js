@@ -691,56 +691,56 @@ const resourceData = {
       },
     ],
 
-    "Practical (6) Gynoecium, Fruit & Seed": [
-      {
-        name: "Corolla_&_Androecium.pdf",
-        pageCount: 4,
-        fileSize: "759 KB",
-        type: "PDF",
-        thumbnail: "./resources/botany/bot_2101-2106/practical(5)/thumb.jpg",
-        source: "Aung Phyo Paing",
-        url: "./resources/botany/bot_2101-2106/practical(5)/bot-2101-2106-practical-5-corolla_&_androecium.pdf",
-      },
+    // "Practical (6) Gynoecium, Fruit & Seed": [
+    //   {
+    //     name: "Corolla_&_Androecium.pdf",
+    //     pageCount: 4,
+    //     fileSize: "759 KB",
+    //     type: "PDF",
+    //     thumbnail: "./resources/botany/bot_2101-2106/practical(5)/thumb.jpg",
+    //     source: "Aung Phyo Paing",
+    //     url: "./resources/botany/bot_2101-2106/practical(5)/bot-2101-2106-practical-5-corolla_&_androecium.pdf",
+    //   },
 
-      {
-        name: "Bot_2101-2106-P5-Content_Ref.-1.jpg",
-        fileSize: "411 KB",
-        type: "JPG",
-        source: "Aung Phyo Paing",
-        url: "./resources/botany/bot_2101-2106/practical(5)/Bot_2101-2106-P5-Content_Ref.-1.jpg",
-      },
+    //   {
+    //     name: "Bot_2101-2106-P5-Content_Ref.-1.jpg",
+    //     fileSize: "411 KB",
+    //     type: "JPG",
+    //     source: "Aung Phyo Paing",
+    //     url: "./resources/botany/bot_2101-2106/practical(5)/Bot_2101-2106-P5-Content_Ref.-1.jpg",
+    //   },
 
-      {
-        name: "Bot_2101-2106-P5-Diagram_Ref.-1.jpg",
-        fileSize: "261 KB",
-        type: "JPG",
-        source: "Aung Phyo Paing",
-        url: "./resources/botany/bot_2101-2106/practical(5)/Bot_2101-2106-P5-Diagram_Ref.-1.jpg",
-      },
-      {
-        name: "Bot_2101-2106-P5-Diagram_Ref.-2.jpg",
-        fileSize: "219 KB",
-        type: "JPG",
-        source: "Aung Phyo Paing",
-        url: "./resources/botany/bot_2101-2106/practical(5)/Bot_2101-2106-P5-Diagram_Ref.-2.jpg",
-      },
+    //   {
+    //     name: "Bot_2101-2106-P5-Diagram_Ref.-1.jpg",
+    //     fileSize: "261 KB",
+    //     type: "JPG",
+    //     source: "Aung Phyo Paing",
+    //     url: "./resources/botany/bot_2101-2106/practical(5)/Bot_2101-2106-P5-Diagram_Ref.-1.jpg",
+    //   },
+    //   {
+    //     name: "Bot_2101-2106-P5-Diagram_Ref.-2.jpg",
+    //     fileSize: "219 KB",
+    //     type: "JPG",
+    //     source: "Aung Phyo Paing",
+    //     url: "./resources/botany/bot_2101-2106/practical(5)/Bot_2101-2106-P5-Diagram_Ref.-2.jpg",
+    //   },
 
-      {
-        name: "Bot_2101-2106-P5-Diagram_Ref.-3.jpg",
-        fileSize: "278 KB",
-        type: "JPG",
-        source: "Aung Phyo Paing",
-        url: "./resources/botany/bot_2101-2106/practical(5)/Bot_2101-2106-P5-Diagram_Ref.-3.jpg",
-      },
+    //   {
+    //     name: "Bot_2101-2106-P5-Diagram_Ref.-3.jpg",
+    //     fileSize: "278 KB",
+    //     type: "JPG",
+    //     source: "Aung Phyo Paing",
+    //     url: "./resources/botany/bot_2101-2106/practical(5)/Bot_2101-2106-P5-Diagram_Ref.-3.jpg",
+    //   },
 
-      {
-        name: "Bot_2101-2106-P5-Diagram_Ref.-4.jpg",
-        fileSize: "389 KB",
-        type: "JPG",
-        source: "Aung Phyo Paing",
-        url: "./resources/botany/bot_2101-2106/practical(5)/Bot_2101-2106-P5-Diagram_Ref.-4.jpg",
-      },
-    ],
+    //   {
+    //     name: "Bot_2101-2106-P5-Diagram_Ref.-4.jpg",
+    //     fileSize: "389 KB",
+    //     type: "JPG",
+    //     source: "Aung Phyo Paing",
+    //     url: "./resources/botany/bot_2101-2106/practical(5)/Bot_2101-2106-P5-Diagram_Ref.-4.jpg",
+    //   },
+    // ],
   },
 
   "Zool 2001-2002 (Pract.)": {
