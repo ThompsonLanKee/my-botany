@@ -1,5 +1,8 @@
 const themeToggle = document.getElementById("themeToggle");
 const html = document.documentElement;
+let weatherEffectsRunning = false;
+let weatherEffectsStopping = false;
+let rainCleanupTimer = null;
 
 themeToggle.addEventListener("click", () => {
   const current = html.getAttribute("data-theme");
@@ -7,6 +10,7 @@ themeToggle.addEventListener("click", () => {
   html.setAttribute("data-theme", next);
   localStorage.setItem("theme", next);
   themeToggle.textContent = next === "dark" ? "🌙" : "☀️";
+  
 });
 
 // Load saved theme
@@ -114,11 +118,11 @@ const allColumns = [
   // June
   { month: "June", date: 6, exp: { content: "7", span: 2 } },
   { month: "June", date: 7 },
-  { month: "June", date: 13 },
+  { month: "June", date: 13 ,exp: { content: '<span class="vertical-text1">ကျူရှင်</span>'}},
   { month: "June", date: 14 },
   { month: "June", date: 20, exp: { content: "8", span: 2 } },
   { month: "June", date: 21 },
-  { month: "June", date: 27 },
+  { month: "June", date: 27, exp: { content: '<span class="vertical-text1">ကျူရှင်</span>'} },
   { month: "June", date: 28 },
   // July
   { month: "July", date: 4, exp: { content: "9", span: 2 } },
@@ -318,6 +322,26 @@ function getWeatherIcon(code) {
   return "⛅";
 }
 
+// function getWeatherIcon(code){
+
+//     if(code === 0)
+//         return `<i class="wi wi-sun"></i>`;
+
+//     if(code === 1 || code === 2)
+//         return `<i class="wi wi-day-cloudy"></i>`;
+
+//     if(code === 3)
+//         return `<i class="wi wi-cloud"></i>`;
+
+//     if(code >= 51 && code <= 82)
+//         return `<i class="wi wi-rain"></i>`;
+
+//     if(code >= 95)
+//         return `<i class="wi wi-thunderstorm"></i>`;
+
+//     return `<i class="wi wi-cloudy"></i>`;
+// }
+
 function getWeatherDescription(code) {
   const desc = {
     0: "Clear Sky",
@@ -369,6 +393,8 @@ async function getW() {
 
     document.getElementById("main-weather-icon").textContent =
       getWeatherIcon(wCode);
+    // document.getElementById("main-weather-icon").innerHTML =
+    // getWeatherIcon(wCode);
     document.getElementById("current-temp").textContent = tCur;
     document.getElementById("weather-condition").textContent =
       getWeatherDescription(wCode);
@@ -497,6 +523,91 @@ const resourceData = {
     { name: "Writing_Examples.pdf", size: "2.8 MB", icon: "📄" },
     { name: "Audio_Lessons.zip", size: "15.2 MB", icon: "📦" },
   ],
+
+  "Bot 2104-2109 (Pract.)": {
+    "Practical (1) Some Useful Glossary Of Ecology ": [
+      {
+        name: "Some_Useful_Glossary_Of_Ecology.pdf",
+        pageCount: 2,
+        fileSize: "534 KB",
+        type: "PDF",
+        thumbnail: "./resources/botany/bot_2104-2109/practical(1)/thumb.jpg",
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2104-2109/practical(1)/bot-2104-2109-practical-1-some-useful-glossary-of-ecology.pdf",
+      },
+
+    
+    ],
+
+    "Practical (2) Introduction of Ecology": [
+      {
+        name: "Introduction_of_Ecology.pdf",
+        pageCount: 3,
+        fileSize: "755 KB",
+        type: "PDF",
+        thumbnail: "./resources/botany/bot_2104-2109/practical(2)/thumb.jpg",
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2104-2109/practical(2)/bot-2104-2109-practical-2-introduction-of-ecology.pdf",
+      },
+
+     
+    ],
+
+    "Practical (3) Difference Between Heliophytes And Sciophytes": [
+      {
+        name: "Difference_Between_Heliophytes_And_Sciophytes.pdf",
+        pageCount: 3,
+        fileSize: "707 KB",
+        type: "PDF",
+        thumbnail: "./resources/botany/bot_2104-2109/practical(3)/thumb.jpg",
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2104-2109/practical(3)/bot-2104-2109-practical-3-difference-between-heliophytes-and-sciophytes.pdf",
+      },
+
+    ],
+
+    "Practical (4) Soil Quality And Soil Texture": [
+      {
+        name: "Soil_Quality_And_Soil_Texture.pdf",
+        pageCount: 2,
+        fileSize: "530 KB",
+        type: "PDF",
+        thumbnail: "./resources/botany/bot_2104-2109/practical(4)/thumb.jpg",
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2104-2109/practical(4)/bot-2104-2109-practical-4-soil-quality-and-soil-texture.pdf",
+      },
+
+    ],
+
+    "Practical (5) Natural Selection": [
+      {
+        name: "Natural_Selection.pdf",
+        pageCount: 2,
+        fileSize: "547 KB",
+        type: "PDF",
+        thumbnail: "./resources/botany/bot_2104-2109/practical(5)/thumb.jpg",
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2104-2109/practical(5)/bot-2104-2109-practical-5-natural-selection.pdf",
+      },
+    ],
+
+
+  
+    "Practical (6) Horticulture": [
+      {
+        name: "Horticulture.pdf",
+        pageCount: 2,
+        fileSize: "468 KB",
+        type: "PDF",
+        thumbnail: "./resources/botany/bot_2104-2109/practical(6)/thumb.jpg",
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2104-2109/practical(6)/bot-2104-2109-practical-6-horticulture.pdf",
+      },
+
+    ],
+  },
+
+  //bot 2101-2106
 
   "Bot 2101-2106 (Pract.)": {
     "Practical (1) Taxonomic Description/Habit": [
@@ -691,56 +802,42 @@ const resourceData = {
       },
     ],
 
-    // "Practical (6) Gynoecium, Fruit & Seed": [
-    //   {
-    //     name: "Corolla_&_Androecium.pdf",
-    //     pageCount: 4,
-    //     fileSize: "759 KB",
-    //     type: "PDF",
-    //     thumbnail: "./resources/botany/bot_2101-2106/practical(5)/thumb.jpg",
-    //     source: "Aung Phyo Paing",
-    //     url: "./resources/botany/bot_2101-2106/practical(5)/bot-2101-2106-practical-5-corolla_&_androecium.pdf",
-    //   },
 
-    //   {
-    //     name: "Bot_2101-2106-P5-Content_Ref.-1.jpg",
-    //     fileSize: "411 KB",
-    //     type: "JPG",
-    //     source: "Aung Phyo Paing",
-    //     url: "./resources/botany/bot_2101-2106/practical(5)/Bot_2101-2106-P5-Content_Ref.-1.jpg",
-    //   },
+  
+    "Practical (6) Gynoecium, Fruit & Seed": [
+      {
+        name: "Gynoecium_Fruit_&_Seed.pdf",
+        pageCount: 2,
+        fileSize: "547 KB",
+        type: "PDF",
+        thumbnail: "./resources/botany/bot_2101-2106/practical(6)/thumb.jpg",
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2101-2106/practical(6)/bot-2101-2106-practical-6-gynoecium_fruit_&_seed.pdf",
+      },
 
-    //   {
-    //     name: "Bot_2101-2106-P5-Diagram_Ref.-1.jpg",
-    //     fileSize: "261 KB",
-    //     type: "JPG",
-    //     source: "Aung Phyo Paing",
-    //     url: "./resources/botany/bot_2101-2106/practical(5)/Bot_2101-2106-P5-Diagram_Ref.-1.jpg",
-    //   },
-    //   {
-    //     name: "Bot_2101-2106-P5-Diagram_Ref.-2.jpg",
-    //     fileSize: "219 KB",
-    //     type: "JPG",
-    //     source: "Aung Phyo Paing",
-    //     url: "./resources/botany/bot_2101-2106/practical(5)/Bot_2101-2106-P5-Diagram_Ref.-2.jpg",
-    //   },
+      {
+        name: "Bot_2101-2106-P6-Content_Ref.-1.jpg",
+        fileSize: "391 KB",
+        type: "JPG",
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2101-2106/practical(6)/Bot_2101-2106-P6-Content_Ref.-1.jpg",
+      },
 
-    //   {
-    //     name: "Bot_2101-2106-P5-Diagram_Ref.-3.jpg",
-    //     fileSize: "278 KB",
-    //     type: "JPG",
-    //     source: "Aung Phyo Paing",
-    //     url: "./resources/botany/bot_2101-2106/practical(5)/Bot_2101-2106-P5-Diagram_Ref.-3.jpg",
-    //   },
-
-    //   {
-    //     name: "Bot_2101-2106-P5-Diagram_Ref.-4.jpg",
-    //     fileSize: "389 KB",
-    //     type: "JPG",
-    //     source: "Aung Phyo Paing",
-    //     url: "./resources/botany/bot_2101-2106/practical(5)/Bot_2101-2106-P5-Diagram_Ref.-4.jpg",
-    //   },
-    // ],
+      {
+        name: "Bot_2101-2106-P6-Diagram_Ref.-1.jpg",
+        fileSize: "334 KB",
+        type: "JPG",
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2101-2106/practical(6)/Bot_2101-2106-P6-Diagram_Ref.-1.jpg",
+      },
+      {
+        name: "Bot_2101-2106-P6-Diagram_Ref.-2.jpg",
+        fileSize: "310 KB",
+        type: "JPG",
+        source: "Aung Phyo Paing",
+        url: "./resources/botany/bot_2101-2106/practical(6)/Bot_2101-2106-P6-Diagram_Ref.-2.jpg",
+      },
+    ],
   },
 
   "Zool 2001-2002 (Pract.)": {
@@ -956,6 +1053,43 @@ const resourceData = {
         type: "JPG",
         source: "May Myat Noe",
         url: "./resources/zoo/practical/p6-2002/Zoo-P6-Diagram_Ref.-1.jpg",
+      },
+    ],
+
+    
+    "Practical (7) Granulosa External Features (2001-Invertebrate)": [
+      {
+        name: "Granulosa_External_Features(Vert.).pdf",
+        pageCount: 3,
+        fileSize: "518 KB",
+        thumbnail: "./resources/zoo/practical/p7-2001/thumb.jpg",
+        type: "PDF",
+        source: "Aung Phyo Paing",
+        url: "./resources/zoo/practical/p7-2001/zool-2001-2002-practical-7-granulosa-external-features-(invert.).pdf",
+      },
+
+      {
+        name: "Zoo-P7-Content_Ref.-1.jpg",
+        fileSize: "194 KB",
+        type: "JPG",
+        source: "May Myat Noe",
+        url: "./resources/zoo/practical/p7-2001/Zoo-P7-Content_Ref.-1.jpg",
+      },
+
+      {
+        name: "Zoo-P7-Content_Ref.-2.jpg",
+        fileSize: "146 KB",
+        type: "JPG",
+        source: "May Myat Noe",
+        url: "./resources/zoo/practical/p7-2001/Zoo-P7-Content_Ref.-2.jpg",
+      },
+      {
+        name: "Zoo-P7-Diagram_Ref.-1.jpg",
+        size: "152 KB",
+        icon: "🖼️",
+        type: "JPG",
+        source: "May Myat Noe",
+        url: "./resources/zoo/practical/p7-2001/Zoo-P7-Diagram_Ref.-1.jpg",
       },
     ],
   },
@@ -1410,6 +1544,12 @@ document.addEventListener("DOMContentLoaded", () => {
 
     function startRain(){
 
+
+    if(rainCleanupTimer){
+        clearTimeout(rainCleanupTimer);
+        rainCleanupTimer = null;
+    }
+
         rainContainer.innerHTML = "";
 
         rainContainer.classList.add("active");
@@ -1424,6 +1564,9 @@ document.addEventListener("DOMContentLoaded", () => {
             drop.style.left =
                 Math.random() * 100 + "%";
 
+            drop.style.opacity =
+                0.3 + Math.random() * 0.7;
+
             drop.style.animationDuration =
                 (0.5 + Math.random()) + "s";
 
@@ -1432,14 +1575,72 @@ document.addEventListener("DOMContentLoaded", () => {
 
             rainContainer.appendChild(drop);
         }
-    }
 
-    function stopRain(){
+        for(let i=0;i<12;i++){
+   weatherFxLayer.appendChild(createWind());
+}
+
+for(let i=0;i<20;i++){
+   weatherFxLayer.appendChild(createLeaf());
+}
+    }
+function stopRain(){
+
+    rainContainer.classList.add("fading");
+
+    document
+        .querySelectorAll(".raindrop")
+        .forEach(drop => {
+
+            drop.classList.add("rain-fade-out");
+
+        });
+
+    document
+        .querySelectorAll(".wind-svg")
+        .forEach(w => {
+
+            w.classList.add("wind-fade-out");
+
+            setTimeout(() => {
+
+                if(w.parentNode){
+                    w.remove();
+                }
+
+            },3000);
+
+        });
+
+    document
+        .querySelectorAll(".leaf-svg")
+        .forEach(l => {
+
+            l.classList.add("leaf-fade-out");
+
+            setTimeout(() => {
+
+                if(l.parentNode){
+                    l.remove();
+                }
+
+            },4000);
+
+        });
+
+    rainCleanupTimer = setTimeout(() => {
+
+        rainContainer.innerHTML = "";
 
         rainContainer.classList.remove("active");
-        rainContainer.innerHTML = "";
-    }
+        rainContainer.classList.remove("fading");
 
+        weatherEffectsRunning = false;
+
+        rainCleanupTimer = null;
+
+    },4000);
+}
     musicBtn.addEventListener("click", async () => {
 
         if(!playing){
@@ -1472,3 +1673,124 @@ document.addEventListener("DOMContentLoaded", () => {
     });
 
 });
+
+
+function createWind(){
+
+    const wind =
+        document.createElement("div");
+
+    wind.className = "wind-svg";
+
+    wind.style.top =
+        Math.random()*100 + "%";
+
+    wind.style.animationDuration =
+        (5 + Math.random()*5) + "s";
+
+    const windColor =
+        getComputedStyle(document.documentElement)
+        .getPropertyValue("--wind-color");
+
+    const styles = [
+
+`M5 35 C40 5 80 5 120 35 S170 60 180 25`,
+`M5 25 C30 0 60 50 120 20`,
+`M5 20 C40 0 90 45 180 25`,
+`M5 35 C50 5 120 60 220 25`
+
+    ];
+
+    const path =
+        styles[Math.floor(Math.random()*styles.length)];
+
+   wind.innerHTML = `
+<svg width="240" height="60">
+  <path
+      class="wind-path"
+      d="${path}"
+      stroke-width="2.5"
+      fill="none"/>
+</svg>`;
+
+    return wind;
+}
+
+
+function createLeaf(){
+
+    const leaf =
+        document.createElement("div");
+
+    leaf.className = "leaf-svg";
+
+    leaf.style.left =
+        Math.random()*100 + "%";
+
+    leaf.style.animationDuration =
+        (8 + Math.random()*8) + "s";
+
+    const leafColor =
+        getComputedStyle(document.documentElement)
+        .getPropertyValue("--leaf-color");
+
+    leaf.innerHTML = `
+    <svg width="24" height="24"
+         viewBox="0 0 24 24">
+
+      <path
+        class="leaf-path"
+       d="M12 2
+          C18 5,
+          22 12,
+          12 22
+          C2 12,
+          6 5,
+          12 2Z"/>
+
+    </svg>`;
+
+    return leaf;
+}
+
+function stopWeatherEffects(){
+
+    weatherEffectsStopping = true;
+
+    const winds =
+        document.querySelectorAll(".wind-svg");
+
+    const leaves =
+        document.querySelectorAll(".leaf-svg");
+
+    winds.forEach(w => {
+
+        w.classList.add("wind-fade-out");
+
+        w.addEventListener(
+            "animationend",
+            () => w.remove(),
+            { once:true }
+        );
+
+    });
+
+    leaves.forEach(l => {
+
+        l.classList.add("leaf-fade-out");
+
+        setTimeout(() => {
+
+            if(l.parentNode)
+                l.remove();
+
+        },4000);
+
+    });
+
+    setTimeout(() => {
+
+        weatherEffectsRunning = false;
+
+    },4000);
+}

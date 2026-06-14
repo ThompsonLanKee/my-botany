@@ -60,6 +60,17 @@ textarea{
     --nav-bg:rgba(10,15,10,0.9);
 
     --shadow:0 15px 35px rgba(0,0,0,0.3);
+
+    --rain-color:rgba(255,255,255,.35);
+
+    --wind-color:rgba(255, 255, 255, 0.852);
+
+    --leaf-color:#4ade80;
+
+    --fx-glow:rgba(74,222,128,.25);
+
+
+    
 }
 
 [data-theme="light"]{
@@ -83,7 +94,21 @@ textarea{
     --nav-bg:rgba(255,255,255,0.92);
 
     --shadow:0 10px 30px rgba(0,0,0,0.08);
+
+
+     --wind-color:rgba(15,23,42,.28);
+
+    --rain-color:rgba(15,23,42,.25);
+
+    --leaf-color:#15803d;
+
+    --fx-glow:rgba(22,163,74,.12);
+
+    
+
+    
 }
+
 
 /* =========================
    SCROLLBAR
@@ -493,6 +518,18 @@ td{
 
 .vertical-text{
     color:var(--accent2-light);
+    font-size:0.65rem;
+    font-weight:700;
+}
+
+.vertical-text1,
+.makeup-text{
+    writing-mode:vertical-rl;
+    transform:rotate(180deg);
+}
+
+.vertical-text1{
+    color: red;
     font-size:0.65rem;
     font-weight:700;
 }
@@ -1862,15 +1899,28 @@ font-weight:800;
     display:block;
 }
 
+
+#rainContainer.fading{
+    pointer-events:none;
+}
+
+
 .raindrop{
     position:absolute;
-
+transition:opacity 3s ease;
     width:2px;
     height:22px;
 
     background:rgba(255,255,255,.35);
 
     animation:rainFall linear infinite;
+}
+
+.rain-fade-out{
+
+    opacity:0 !important;
+
+    filter:blur(1px);
 }
 
 [data-theme="light"] .raindrop{
@@ -1885,5 +1935,94 @@ font-weight:800;
 
     to{
         transform:translateY(110vh);
+    }
+}
+#weatherFxLayer{
+    position:fixed;
+    inset:0;
+
+    pointer-events:none;
+
+    overflow:hidden;
+
+    z-index:999;
+}
+
+.wind-svg{
+    position:absolute;
+    opacity:.35;
+    animation:windMove linear infinite;
+}
+
+
+@keyframes windMove{
+    from{
+        transform:translateX(-250px);
+    }
+    to{
+        transform:translateX(calc(100vw + 300px));
+    }
+}
+
+.leaf-svg{
+    position:absolute;
+    top:-100px;
+    opacity:.8;
+    animation:leafDrift linear infinite;
+    filter:drop-shadow(0 0 6px var(--fx-glow));
+}
+
+.wind-path{
+    stroke:var(--wind-color);
+}
+
+.leaf-path{
+    fill:var(--leaf-color);
+}
+
+.wind-fade-out{
+    opacity:0;
+    transition:opacity 3s ease;
+}
+
+.leaf-fade-out{
+    opacity:0;
+    transition:opacity 4s ease;
+}
+
+@keyframes leafDrift{
+    0%{
+        transform:
+            translateX(0)
+            translateY(-100px)
+            rotate(0deg);
+    }
+
+    25%{
+        transform:
+            translateX(120px)
+            translateY(25vh)
+            rotate(90deg);
+    }
+
+    50%{
+        transform:
+            translateX(-70px)
+            translateY(50vh)
+            rotate(180deg);
+    }
+
+    75%{
+        transform:
+            translateX(100px)
+            translateY(75vh)
+            rotate(270deg);
+    }
+
+    100%{
+        transform:
+            translateX(-120px)
+            translateY(110vh)
+            rotate(360deg);
     }
 }
