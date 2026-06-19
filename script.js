@@ -1118,6 +1118,10 @@ const resourceData = {
         url: "./resources/botany/bot_2102-2107/assignment/Bot_2107_Assignment.pdf",
       },
 
+      
+
+      
+
       // {
       //   name: "Zoo-P1-Content_Ref.-1.jpg",
       //   fileSize: "169 KB",
@@ -1128,6 +1132,41 @@ const resourceData = {
 
     ],
   },
+
+  "Bot 2103-2108 (Asgmt.)": {
+    "Bot-2103 (Genetics and Cytogenetics) Assignment": [
+      {
+        name: "Bot-2103 (Genetics and Cytogenetics)",
+        pageCount: 2,
+        fileSize: "779 KB",
+        type: "PDF",
+        thumbnail: "./resources/botany/bot_2103-2108/assignment/2103.png",
+        source: "Purchased Note",
+        url: "./resources/botany/bot_2103-2108/assignment/Bot_2103_Assignment.pdf",
+      },
+
+    ],
+    "Bot-2108 (Advanced Genetics) Assignment": [
+      {
+        name: "Bot-2108 (Advanced Genetics)",
+        pageCount: 2,
+        fileSize: "809 KB",
+        type: "PDF",
+        thumbnail: "./resources/botany/bot_2103-2108/assignment/2108.png",
+        source: "Purchased Note",
+        url: "./resources/botany/bot_2103-2108/assignment/Bot_2108_Assignment.pdf",
+      },
+    ],
+
+  },
+"Eng 2001-2002 (Asgmt.)": {
+    "Assignments": [
+        // "📌 Assignment 1 - Essay Writing",
+        // "📌 Assignment 2 - Grammar Exercise",
+        // "📌 Assignment 3 - Comprehension",
+        // "All assignments should be submitted before the deadline."
+    ]
+},
 
   "Botany Basics": [
     { name: "Plant_Structure.pdf", size: "3.2 MB", icon: "📄" },
@@ -1234,6 +1273,30 @@ function openResourceModal(event, resourceName) {
     `;
 
     const filesContainer = folder.querySelector(".resource-subfolder-files");
+
+    if (
+    Array.isArray(files) &&
+    files.length > 0 &&
+    typeof files[0] === "string"
+) {
+
+    files.forEach(text => {
+
+        const item =
+            document.createElement("div");
+
+        item.className =
+            "content-item";
+
+        item.innerHTML = text;
+
+        filesContainer.appendChild(item);
+    });
+
+    attachmentsContainer.appendChild(folder);
+
+    return;
+}
 
     files.forEach((attachment) => {
       const card = document.createElement("div");
