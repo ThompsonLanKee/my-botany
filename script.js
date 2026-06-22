@@ -957,7 +957,7 @@ const resourceData = {
         thumbnail: "./resources/zoo/practical/p4-2002/thumb.jpg",
         type: "PDF",
         source: "Aung Phyo Paing",
-        url: "./resources/zoo/practical/p4-2002/zool-2001-2002-practical-4-Pheretima-posthuma-external-features-(vert.).pdf",
+        url: "./resources/zoo/practical/p4-2002/zool-2001-2002-practical-4-Rana-tigrina-external-features-(vert.).pdf",
       },
 
       {
@@ -1160,7 +1160,16 @@ const resourceData = {
 
   },
 "Eng 2001-2002 (Asgmt.)": {
-    "Assignments": [
+    "Eng 2001 (English) Assigment": [
+       {
+        name: "Eng 2001 (English)",
+        pageCount: 2,
+        fileSize: "809 KB",
+        type: "PDF",
+        thumbnail: "./resources/english/eng-2001_2002/assignment/2001.jpg",
+        source: "Purchased Note",
+        url: "./resources/english/eng-2001_2002/assignment/English_Assignment(First_Sem).pdf",
+      },
         // "📌 Assignment 1 - Essay Writing",
         // "📌 Assignment 2 - Grammar Exercise",
         // "📌 Assignment 3 - Comprehension",
@@ -1243,6 +1252,59 @@ const resourceData = {
     { name: "Study_Questions.pdf", size: "1.4 MB", icon: "📄" },
   ],
 };
+
+const modalContent =
+    document.querySelector(
+        ".resource-modal-content"
+    );
+
+const topBtn =
+    document.querySelector(
+        ".resource-back-top"
+    );
+
+modalContent.addEventListener("scroll", () => {
+
+    topBtn.style.display =
+        modalContent.scrollTop > 300
+        ? "flex"
+        : "none";
+
+});
+
+const resourceModal =
+    document.getElementById(
+        "resourceModal"
+    );
+
+resourceModal.addEventListener(
+    "click",
+    (e) => {
+
+        if(e.target === resourceModal){
+
+            closeResourceModal();
+
+        }
+
+    }
+);
+
+function scrollResourceTop(){
+
+    document
+        .querySelector(
+            ".resource-modal-content"
+        )
+        .scrollTo({
+
+            top:0,
+
+            behavior:"smooth"
+
+        });
+
+}
 
 function openResourceModal(event, resourceName) {
   event.stopPropagation();

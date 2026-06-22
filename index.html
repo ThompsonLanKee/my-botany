@@ -45,6 +45,51 @@ href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-ic
 
     <!-- ===== RESOURCE MODAL ===== -->
     <div class="resource-modal-overlay" id="resourceModal">
+      <button
+    class="resource-floating-close"
+    onclick="closeResourceModal()"
+    aria-label="Close"
+>
+    <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+    >
+        <path
+            d="M18 6L6 18M6 6L18 18"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+        />
+    </svg>
+</button>
+<button
+    class="resource-back-top"
+    onclick="scrollResourceTop()"
+    aria-label="Back to top"
+>
+    <svg
+        width="24"
+        height="24"
+        viewBox="0 0 24 24"
+        fill="none"
+    >
+        <path
+            d="M12 19V5"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+        />
+        <path
+            d="M6 11L12 5L18 11"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+        />
+    </svg>
+</button>
       <div class="resource-modal-content">
         <div class="resource-modal-header">
           <h2 id="modalResourceName">Resource Name</h2>
@@ -60,6 +105,12 @@ href="https://cdnjs.cloudflare.com/ajax/libs/weather-icons/2.0.12/css/weather-ic
 
     <!-- FILE VIEWER -->
     <div class="file-viewer" id="fileViewer">
+      <button
+    class="viewer-floating-close" style="background-color: red; border-radius: 4px;"
+    onclick="closeViewer()"
+>
+    x
+</button>
       <div class="file-viewer-content">
         <div class="viewer-header">
           <h3 id="viewerTitle">Preview</h3>
