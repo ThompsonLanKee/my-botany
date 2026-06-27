@@ -1094,8 +1094,49 @@ const resourceData = {
     ],
   },
 
+
+  "Bot 2101-2106 (Asgmt.)": {
+    "Bot-2101 (Angiosperms) Assignment": [
+      {
+        name: "Bot-2101 (Angiosperms)",
+        pageCount: 4,
+        fileSize: "779 KB",
+        type: "PDF",
+        thumbnail: "./resources/botany/bot_2101-2106/assignment/thumb.jpg",
+        source: "Answer Booklet",
+        url: "./resources/botany/bot_2101-2106/assignment/Bot_2101_Assignment_AB.pdf",
+      },
+
+    ],
+    // "Bot-2106 (Advanced Genetics) Assignment": [
+    //   {
+    //     name: "Bot-2108 (Advanced Genetics)",
+    //     pageCount: 2,
+    //     fileSize: "809 KB",
+    //     type: "PDF",
+    //     thumbnail: "./resources/botany/bot_2103-2108/assignment/2108.png",
+    //     source: "Purchased Note",
+    //     url: "./resources/botany/bot_2103-2108/assignment/Bot_2108_Assignment.pdf",
+    //   },
+    // ],
+
+  },
+  
+
+  
   "Bot 2102-2107 (Asgmt.)": {
+    
     "Bot-2102 (Cell Biology) Assignment": [
+      {
+        name: "Bot-2102 (Cell Biology)",
+        pageCount: 2,
+        fileSize: "665 KB",
+        type: "PDF",
+        thumbnail: "./resources/botany/bot_2102-2107/assignment/thumb.jpg",
+        source: "Answer Booklet",
+        url: "./resources/botany/bot_2102-2107/assignment/Bot_2102_Assignment_AB.pdf",
+      },
+
       {
         name: "Bot-2102 (Cell Biology)",
         pageCount: 2,
@@ -1137,6 +1178,15 @@ const resourceData = {
     "Bot-2103 (Genetics and Cytogenetics) Assignment": [
       {
         name: "Bot-2103 (Genetics and Cytogenetics)",
+        pageCount: 4,
+        fileSize: "779 KB",
+        type: "PDF",
+        thumbnail: "./resources/botany/bot_2103-2108/assignment/thumb.jpg",
+        source: "Answer Booklet",
+        url: "./resources/botany/bot_2103-2108/assignment/Bot_2103_Assignment_AB.pdf",
+      },
+      {
+        name: "Bot-2103 (Genetics and Cytogenetics)",
         pageCount: 2,
         fileSize: "779 KB",
         type: "PDF",
@@ -1159,6 +1209,60 @@ const resourceData = {
     ],
 
   },
+
+  "Bot 2104-2109 (Asgmt.)": {
+    "Bot-2104 (Ecology) Assignment": [
+      {
+        name: "Bot-2104 (Ecology)",
+        pageCount: 3,
+        fileSize: "779 KB",
+        type: "PDF",
+        thumbnail: "./resources/botany/bot_2104-2109/assignment/thumb.jpg",
+        source: "Answer Booklet",
+        url: "./resources/botany/bot_2104-2109/assignment/Bot_2104_Assignment_AB.pdf",
+      },
+      // {
+      //   name: "Bot-2109 (Genetics and Cytogenetics)",
+      //   pageCount: 2,
+      //   fileSize: "779 KB",
+      //   type: "PDF",
+      //   thumbnail: "./resources/botany/bot_2103-2108/assignment/2103.png",
+      //   source: "Purchased Note",
+      //   url: "./resources/botany/bot_2103-2108/assignment/Bot_2103_Assignment.pdf",
+      // },
+
+    ],
+    "Bot-2109 (Advanced Genetics) Assignment": [
+      // {
+      //   name: "Bot-2108 (Advanced Genetics)",
+      //   pageCount: 2,
+      //   fileSize: "809 KB",
+      //   type: "PDF",
+      //   thumbnail: "./resources/botany/bot_2103-2108/assignment/2108.png",
+      //   source: "Purchased Note",
+      //   url: "./resources/botany/bot_2103-2108/assignment/Bot_2108_Assignment.pdf",
+      // },
+    ],
+
+  },
+  
+"Zool. 2001-2002 (Asgmt.)": {
+    "Zool. 2001 (Invertebrate) Assigment": [
+       {
+        name: "Zool. 2001 (Invertebrate)",
+        pageCount: 2,
+        fileSize: "809 KB",
+        type: "PDF",
+        thumbnail: "./resources/zoo/assignment/thumb.jpg",
+        source: "Answer Booklet",
+        url: "./resources/zoo/assignment/Zool_2001_Assignment_AB.pdf",
+      },
+        // "📌 Assignment 1 - Essay Writing",
+        // "📌 Assignment 2 - Grammar Exercise",
+        // "📌 Assignment 3 - Comprehension",
+        // "All assignments should be submitted before the deadline."
+    ]
+},
 "Eng 2001-2002 (Asgmt.)": {
     "Eng 2001 (English) Assigment": [
        {
@@ -1167,7 +1271,7 @@ const resourceData = {
         fileSize: "809 KB",
         type: "PDF",
         thumbnail: "./resources/english/eng-2001_2002/assignment/2001.jpg",
-        source: "Purchased Note",
+        source: "Answer Booklet",
         url: "./resources/english/eng-2001_2002/assignment/English_Assignment(First_Sem).pdf",
       },
         // "📌 Assignment 1 - Essay Writing",
@@ -1378,7 +1482,7 @@ function openResourceModal(event, resourceName) {
 
     <div class="attachment-info">
 
-        <div class="info-row">
+       <!-- <div class="info-row">
             <span class="info-label">
                 Size
             </span>
@@ -1388,7 +1492,7 @@ function openResourceModal(event, resourceName) {
             <span class="info-value">
                 ${attachment.fileSize}
             </span>
-        </div>
+        </div> -->
 
         <div class="info-row">
             <span class="info-label">
