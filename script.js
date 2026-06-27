@@ -127,7 +127,7 @@ const allColumns = [
   // July
   { month: "July", date: 4, exp: { content: "9", span: 2 } },
   { month: "July", date: 5 },
-  { month: "July", date: 11 },
+  { month: "July", date: 11 , exp: { content: '<span class="vertical-text1">ကျူရှင်</span>'}}, 
   { month: "July", date: 12 },
   {
     month: "July",
