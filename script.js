@@ -1272,7 +1272,7 @@ const resourceData = {
         type: "PDF",
         thumbnail: "./resources/english/eng-2001_2002/assignment/2001.jpg",
         source: "Answer Booklet",
-        url: "./resources/english/eng-2001_2002/assignment/English_Assignment(First_Sem).pdf",
+        url: "./resources/english/eng-2001_2002/assignment/English_Assignment_AB.pdf",
       },
         // "📌 Assignment 1 - Essay Writing",
         // "📌 Assignment 2 - Grammar Exercise",
